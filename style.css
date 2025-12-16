@@ -1,4 +1,4 @@
-/* Premium Design System - Options Psychiatry */
+﻿/* Premium Design System - Options Psychiatry */
 
 :root {
     /* Palette - Deep, Rich, Trusted */
@@ -184,8 +184,8 @@ img {
 .topbar {
     background: var(--primary-dark);
     color: rgba(255, 255, 255, 0.9);
-    padding: 10px 0;
-    font-size: 0.9rem;
+    padding: 12px 0;
+    font-size: 0.95rem;
 }
 
 .topbar-container {
@@ -195,7 +195,7 @@ img {
 
 .topbar-info {
     display: flex;
-    gap: 32px;
+    gap: 40px;
 }
 
 .topbar-link {
@@ -240,7 +240,8 @@ img {
     font-weight: 800;
     color: var(--primary-dark);
     letter-spacing: 2px;
-    margin-right: 40px;
+    margin-right: 60px;
+    padding-left: 8px;
 }
 
 .nav-menu {
@@ -268,8 +269,25 @@ img {
     padding: 12px 18px;
     color: var(--primary-dark);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 18px;
+    right: 18px;
+    height: 2px;
+    background: var(--accent-orange);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
 }
 
 .nav-link:hover {
@@ -277,7 +295,7 @@ img {
 }
 
 .dropdown-arrow {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     transition: transform 0.3s ease;
 }
 
@@ -360,12 +378,10 @@ img {
     align-items: center;
     justify-content: center;
     background: linear-gradient(rgba(15, 44, 58, 0.55), rgba(15, 44, 58, 0.55)),
-        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920') center/cover;
+        url('img/banner.webp') center/cover;
     position: relative;
     text-align: center;
     padding: 100px 24px;
-    animation: gradientShift 15s ease infinite;
-    background-size: 150% 150%;
 }
 
 @keyframes gradientShift {
@@ -411,7 +427,6 @@ img {
     font-weight: 600;
     letter-spacing: 0.5px;
     margin-bottom: 32px;
-    animation: fadeInUp 1s ease-out 0.2s both, floatBadge 3s ease-in-out infinite;
 }
 
 @keyframes floatBadge {
@@ -427,18 +442,12 @@ img {
 }
 
 .hero-title {
-    font-size: 5rem;
-    line-height: 1.1;
+    font-size: 4.5rem;
+    line-height: 1.15;
     color: var(--text-white);
     margin-bottom: 28px;
     font-weight: 800;
     letter-spacing: -0.02em;
-    animation: fadeInUp 1s ease-out 0.4s both;
-}
-
-.highlight-teal {
-    color: #ff7a15;
-    font-style: italic;
 }
 
 .hero-subtitle {
@@ -449,7 +458,6 @@ img {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    animation: fadeInUp 1s ease-out 0.6s both;
 }
 
 .hero-buttons {
@@ -457,7 +465,6 @@ img {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
-    animation: fadeInUp 1s ease-out 0.8s both;
 }
 
 .btn-hero-primary {
@@ -541,7 +548,7 @@ img {
 /* Section 1: TMS Intro */
 .section-tms-intro {
     padding: 40px 0 var(--section-spacing);
-    background: var(--bg-white);
+    background: #FAFBFC;
 }
 
 .tms-intro-grid {
@@ -764,7 +771,7 @@ img {
     background: var(--bg-white);
     border: 2px solid #E5E7EB;
     color: var(--text-main);
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 300;
     cursor: pointer;
     transition: var(--transition-smooth);
@@ -795,7 +802,7 @@ img {
     align-items: center;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease, visibility 0.5s;
 }
 
 .condition-slide.active {
@@ -885,7 +892,7 @@ img {
     height: 100%;
     background: linear-gradient(135deg, rgba(15, 44, 58, 0.3), rgba(255, 122, 21, 0.2));
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.4s ease, visibility 0.5s;
     pointer-events: none;
 }
 
@@ -915,7 +922,7 @@ img {
 /* Section 3: Process Cards */
 .section-process {
     padding: var(--section-spacing) 0;
-    background: #fff;
+    background: #FAFBFC;
     position: relative;
     overflow: hidden;
 }
@@ -1226,19 +1233,24 @@ img {
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 32px;
+    gap: 0;
     margin-bottom: 80px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
 }
 
 .stat-card {
     text-align: center;
-    padding: 40px 24px;
+    padding: 50px 24px;
     background: #FFF3EB;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-deep);
+    box-shadow: none;
     transition: var(--transition-smooth);
     position: relative;
-    overflow: hidden;
+    border-right: 2px solid rgba(15, 44, 58, 0.1);
+}
+
+.stat-card:last-child {
+    border-right: none;
 }
 
 .stat-card::before {
@@ -1259,10 +1271,11 @@ img {
 .stat-card:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 20px 50px rgba(255, 122, 21, 0.3);
+    z-index: 1;
 }
 
 .stat-number {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 800;
     color: var(--accent-orange);
     line-height: 1;
@@ -1271,9 +1284,9 @@ img {
 
 .stat-card p {
     margin: 0;
-    color: #000;
+    color: var(--primary-dark);
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 .why-choose-grid {
@@ -1317,17 +1330,20 @@ img {
 }
 
 .why-icon {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin-bottom: 24px;
+    display: block;
 }
 
 .why-card h3 {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    font-size: 1.4rem;
 }
 
 .why-card p {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
 }
 
 /* Insurance Logos Section */
@@ -1340,7 +1356,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 35px;
     flex-wrap: wrap;
 }
 
@@ -1371,7 +1387,7 @@ img {
 .section-relax-cta {
     padding: 60px 0;
     background: linear-gradient(rgba(15, 44, 58, 0.75), rgba(15, 44, 58, 0.75)),
-        url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920') center/cover;
+        url('img/cta.webp') center/cover;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -1411,8 +1427,37 @@ img {
 /* Section 7: Insurance */
 .section-insurance {
     padding: var(--section-spacing) 0;
-    background: var(--gradient-orange-soft);
+    background: var(--bg-white);
     position: relative;
+}
+
+.insurance-reassurance {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.reassurance-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.05rem;
+    color: var(--text-main);
+}
+
+.reassurance-icon {
+    width: 28px;
+    height: 28px;
+    background: #E6F4EA;
+    color: #00C853;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    flex-shrink: 0;
 }
 
 .insurance-slider {
@@ -1472,7 +1517,13 @@ img {
 /* Section 8: Testimonials */
 .section-testimonials {
     padding: var(--section-spacing) 0;
-    background: var(--bg-soft);
+    background: rgb(255, 243, 235);
+    position: relative;
+}
+
+.section-testimonials .section-header h2,
+.section-testimonials .section-header p {
+    color: var(--text-white);
 }
 
 .testimonials-slider {
@@ -1496,9 +1547,13 @@ img {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-deep);
     opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+
+    visibility: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
     pointer-events: none;
     transform: scale(0.95);
+
+    z-index: 1;
 }
 
 .testimonial-card:hover {
@@ -1507,14 +1562,21 @@ img {
 
 .testimonial-card.active {
     opacity: 1;
-    position: relative;
+
+    visibility: visible;
+
     pointer-events: auto;
+    z-index: 10;
     transform: scale(1);
 }
 
 .testimonial-stars {
     font-size: 1.5rem;
     margin-bottom: 24px;
+}
+
+.testimonial-stars .fa-star {
+    color: #FFDF00;
 }
 
 .testimonial-text {
@@ -1546,7 +1608,7 @@ img {
     align-items: center;
     justify-content: center;
     gap: 30px;
-    margin-top: 40px;
+    margin-top: 110px;
 }
 
 .testimonial-prev,
@@ -1591,13 +1653,11 @@ img {
 /* Section 9: Contact */
 .section-contact {
     padding: 60px 0;
-    background: linear-gradient(rgba(15, 44, 58, 0.85), rgba(15, 44, 58, 0.85)),
-        url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1920') center/cover;
     position: relative;
 }
 
 .contact-card {
-    background: rgba(26, 47, 64, 0.9);
+    background: #214261;
     backdrop-filter: blur(15px);
     border-radius: var(--radius-lg);
     padding: 60px;
@@ -1611,6 +1671,17 @@ img {
     color: var(--text-white);
     margin-bottom: 16px;
     font-size: 2.5rem;
+}
+
+.contact-map {
+    margin-top: 50px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.contact-map iframe {
+    display: block;
+    width: 100%;
 }
 
 .contact-subtitle {
@@ -1634,9 +1705,10 @@ img {
 .contact-icon {
     width: 48px;
     height: 48px;
-    background: rgba(26, 188, 156, 0.2);
+    background: #FF7A15;
     border-radius: 12px;
     display: flex;
+    color: #fff;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
@@ -1692,10 +1764,10 @@ img {
 .form-group input,
 .form-group textarea,
 .form-group select {
-    padding: 16px 20px;
-    background: rgba(15, 44, 58, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
+    padding: 18px 22px;
+    background: rgba(15, 44, 58, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
     font-family: var(--font-main);
     font-size: 1rem;
     color: var(--text-white);
@@ -1726,26 +1798,35 @@ img {
 .form-group select:focus {
     outline: none;
     border-color: #1abc9c;
-    background: rgba(15, 44, 58, 0.8);
-    box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.2);
+    background: rgba(15, 44, 58, 0.7);
+    box-shadow: 0 0 0 4px rgba(26, 188, 156, 0.15);
 }
 
 .form-group textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 140px;
 }
 
 .btn-submit {
     background: #FF7A15;
     color: var(--text-white);
-    padding: 18px 36px;
-    border-radius: 8px;
+    padding: 20px 40px;
+    border-radius: 12px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.05rem;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 8px;
+    margin-top: 12px;
+    width: 100%;
+}
+
+.form-helper-text {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
 }
 
 .btn-submit:hover {
@@ -1888,9 +1969,9 @@ img {
 }
 
 .footer-description {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.75);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 24px;
 }
 
@@ -1919,11 +2000,11 @@ img {
 }
 
 .footer-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--text-white);
     margin-bottom: 24px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .footer-links,
@@ -1935,12 +2016,13 @@ img {
 }
 
 .footer-links li {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .footer-links a {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 0.95rem;
+    font-size: 1rem;
+    line-height: 1.7;
     transition: color 0.3s ease;
     display: flex;
     align-items: center;
@@ -1955,9 +2037,9 @@ img {
     display: flex;
     gap: 12px;
     margin-bottom: 16px;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    line-height: 1.7;
     color: rgba(255, 255, 255, 0.8);
-    line-height: 1.6;
 }
 
 .contact-icon {
@@ -1968,8 +2050,9 @@ img {
 .footer-hours li {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 0.95rem;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    line-height: 1.7;
     color: rgba(255, 255, 255, 0.8);
 }
 
@@ -1983,16 +2066,17 @@ img {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 30px 0;
+    border-top: 2px solid rgba(255, 255, 255, 0.15);
+    padding: 32px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .footer-copyright {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.75);
     margin: 0;
 }
 
@@ -2002,7 +2086,7 @@ img {
 }
 
 .footer-policies a {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.8);
     transition: color 0.3s ease;
 }
@@ -2116,6 +2200,45 @@ img {
 
     .quote-text {
         font-size: 1.5rem;
+    }
+
+
+    /* Mobile menu toggle */
+    .mobile-menu-toggle {
+        display: flex !important;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-white);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-menu.active {
+        max-height: 500px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: #f9f9f9;
+        margin-top: 10px;
     }
 
     .hero-section {
@@ -2288,11 +2411,30 @@ img {
         text-align: center;
     }
 
+    /* Doctor Section Mobile */
+    .doctor-profile-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 
+    .doctor-profile-image {
+        max-width: 300px;
+        margin: 0 auto;
+    }
 
-    .doctor-profile-wrapper,
-    d-image {
-        height: 180px;
+    .doctor-profile-content {
+        text-align: center;
+    }
+
+    .doctor-credentials {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .credential-badge {
+        flex-direction: row;
+        text-align: left;
+        padding: 15px;
     }
 
     .process-badge {
@@ -2323,8 +2465,38 @@ img {
         font-size: 2rem;
     }
 
+    .contact-map {
+        margin-top: 50px;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+    }
+
+    .contact-map iframe {
+        display: block;
+        width: 100%;
+    }
+
     .form-row {
         grid-template-columns: 1fr;
+    }
+
+
+    .doctor-profile-image {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .doctor-credentials {
+        gap: 15px;
+    }
+
+    .credential-badge {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .credential-icon {
+        margin-bottom: 10px;
     }
 
     .testimonial-card {

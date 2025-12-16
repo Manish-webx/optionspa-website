@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,6 +16,11 @@
         href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap"
         rel="stylesheet">
     <!-- Styles -->
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -30,11 +35,11 @@
             <div class="container topbar-container">
                 <div class="topbar-info">
                     <a href="tel:6107416567" class="topbar-link">
-                        <span class="topbar-icon">📞</span>
+                        <span class="topbar-icon"><i class="fa fa-phone"></i></span>
                         (610) 741-6567
                     </a>
                     <a href="mailto:help@optionspsychiatry.com" class="topbar-link">
-                        <span class="topbar-icon">✉️</span>
+                        <span class="topbar-icon"><i class="fa fa-envelope"></i></span>
                         help@optionspsychiatry.com
                     </a>
                 </div>
@@ -92,14 +97,13 @@
         <section class="hero-section">
             <div class="hero-content">
                 <div class="hero-badge">Accepting New Patients in Reading, PA</div>
-                <h1 class="hero-title">Leading <span class="highlight-teal">TMS Therapy</span> for Depression and Mental
-                    Wellness.</h1>
+                <h1 class="hero-title">Leading TMS Therapy for Depression and Mental Wellness in Reading, PA.</h1>
                 <p class="hero-subtitle">We provide FDA-approved Transcranial Magnetic Stimulation (TMS) therapy using
                     advanced technology and clinically proven protocols. Our Reading-based clinic is dedicated to
                     delivering compassionate, results-driven mental health care tailored to your needs.</p>
                 <div class="hero-buttons">
-                    <a href="#" class="btn btn-primary">Start Your Journey</a>
-                    <a href="#" class="btn btn-hero-secondary">View Treatments</a>
+                    <a href="#contact" class="btn btn-primary">Schedule a Free Consultation</a>
+                    <a href="tel:6107416567" class="btn btn-hero-secondary">Call (610) 741-6567</a>
                 </div>
             </div>
         </section>
@@ -128,7 +132,7 @@
 
                         <div class="feature-list">
                             <div class="feature-item">
-                                <div class="feature-icon">✓</div>
+                                <div class="feature-icon"><i class="fa fa-check"></i></div>
                                 <div>
                                     <strong>Non-Invasive & Safe</strong>
                                     <p>No surgery, no anesthesia, no downtime. Return to your daily activities
@@ -136,7 +140,7 @@
                                 </div>
                             </div>
                             <div class="feature-item">
-                                <div class="feature-icon">✓</div>
+                                <div class="feature-icon"> <i class="fa fa-check"></i></div>
                                 <div>
                                     <strong>Proven Results</strong>
                                     <p>High success rate for patients who haven't responded to traditional medication
@@ -144,7 +148,7 @@
                                 </div>
                             </div>
                             <div class="feature-item">
-                                <div class="feature-icon">✓</div>
+                                <div class="feature-icon"><i class="fa fa-check"></i></div>
                                 <div>
                                     <strong>Insurance Covered</strong>
                                     <p>Most major insurance plans including Medicare cover TMS therapy for qualified
@@ -191,7 +195,7 @@
 
                 <!-- Tab Navigation -->
                 <div class="conditions-nav-wrapper">
-                    <button class="nav-arrow nav-prev" id="conditionsNavPrev">‹</button>
+                    <button class="nav-arrow nav-prev" id="conditionsNavPrev"><i class="fa fa-arrow-left"></i></button>
                     <div class="conditions-tabs">
                         <button class="condition-tab active" data-condition="0">Depression</button>
                         <button class="condition-tab" data-condition="1">Anxiety</button>
@@ -201,7 +205,7 @@
                         <button class="condition-tab" data-condition="5">ADHD</button>
                         <button class="condition-tab" data-condition="6">Suicidal Ideation</button>
                     </div>
-                    <button class="nav-arrow nav-next" id="conditionsNavNext">›</button>
+                    <button class="nav-arrow nav-next" id="conditionsNavNext"><i class="fa fa-arrow-right"></i></button>
                 </div>
 
                 <!-- Condition Content Slider -->
@@ -215,13 +219,17 @@
                                 treatment-resistant depression using evidence-based therapies and innovative approaches.
                             </p>
                             <ul class="treatment-list">
-                                <li><span class="check-icon">✓</span> TMS Therapy for Treatment-Resistant Depression
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> TMS Therapy for
+                                    Treatment-Resistant Depression
                                 </li>
-                                <li><span class="check-icon">✓</span> Medication Management & Optimization</li>
-                                <li><span class="check-icon">✓</span> Cognitive Behavioral Therapy (CBT)</li>
-                                <li><span class="check-icon">✓</span> Individual & Group Counseling</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Medication Management &
+                                    Optimization</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Cognitive Behavioral
+                                    Therapy (CBT)</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Individual & Group
+                                    Counseling</li>
                             </ul>
-                            <a href="#" class="btn btn-primary">Learn More About Depression Treatment →</a>
+                            <a href="#" class="btn btn-primary">Learn More About Depression Treatment</a>
                         </div>
                         <div class="slide-image">
                             <img src="img/depressed.webp" alt="Depression Treatment">
@@ -237,12 +245,16 @@
                                 disorder,
                                 panic disorder, social anxiety, and other anxiety-related conditions.</p>
                             <ul class="treatment-list">
-                                <li><span class="check-icon">✓</span> Anxiety-Focused Medication Management</li>
-                                <li><span class="check-icon">✓</span> Exposure & Response Prevention Therapy</li>
-                                <li><span class="check-icon">✓</span> Mindfulness-Based Stress Reduction</li>
-                                <li><span class="check-icon">✓</span> Relaxation & Breathing Techniques</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Anxiety-Focused
+                                    Medication Management</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Exposure & Response
+                                    Prevention Therapy</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Mindfulness-Based Stress
+                                    Reduction</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Relaxation & Breathing
+                                    Techniques</li>
                             </ul>
-                            <a href="#" class="btn btn-primary">Learn More About Anxiety Treatment →</a>
+                            <a href="#" class="btn btn-primary">Learn More About Anxiety Treatment</a>
                         </div>
                         <div class="slide-image">
                             <img src="img/anxious-woman-sitting-bed-full-shot.webp" alt="Anxiety Treatment">
@@ -257,12 +269,16 @@
                             <p class="slide-description">Specialized care for post-traumatic stress disorder using
                                 trauma-informed approaches to help you process and heal from traumatic experiences.</p>
                             <ul class="treatment-list">
-                                <li><span class="check-icon">✓</span> Trauma-Focused Cognitive Therapy</li>
-                                <li><span class="check-icon">✓</span> EMDR (Eye Movement Desensitization)</li>
-                                <li><span class="check-icon">✓</span> Medication for PTSD Symptoms</li>
-                                <li><span class="check-icon">✓</span> Safe Environment & Crisis Support</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Trauma-Focused Cognitive
+                                    Therapy</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> EMDR (Eye Movement
+                                    Desensitization)</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Medication for PTSD
+                                    Symptoms</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Safe Environment &
+                                    Crisis Support</li>
                             </ul>
-                            <a href="#" class="btn btn-primary">Learn More About PTSD Treatment →</a>
+                            <a href="#" class="btn btn-primary">Learn More About PTSD Treatment</a>
                         </div>
                         <div class="slide-image">
                             <img src="img/ptsd.webp" alt="PTSD Treatment">
@@ -278,12 +294,16 @@
                                 intrusive
                                 thoughts using proven therapeutic techniques and medication when appropriate.</p>
                             <ul class="treatment-list">
-                                <li><span class="check-icon">✓</span> Exposure & Response Prevention (ERP)</li>
-                                <li><span class="check-icon">✓</span> TMS Therapy for Severe OCD</li>
-                                <li><span class="check-icon">✓</span> SSRI Medication Management</li>
-                                <li><span class="check-icon">✓</span> Cognitive Restructuring Techniques</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Exposure & Response
+                                    Prevention (ERP)</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> TMS Therapy for Severe
+                                    OCD</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> SSRI Medication
+                                    Management</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Cognitive Restructuring
+                                    Techniques</li>
                             </ul>
-                            <a href="#" class="btn btn-primary">Learn More About OCD Treatment →</a>
+                            <a href="#" class="btn btn-primary">Learn More About OCD Treatment</a>
                         </div>
                         <div class="slide-image">
                             <img src="img/ocd.webp" alt="OCD Treatment">
@@ -298,12 +318,16 @@
                             <p class="slide-description">Comprehensive management of bipolar disorder with mood
                                 stabilization, symptom monitoring, and ongoing support for long-term wellness.</p>
                             <ul class="treatment-list">
-                                <li><span class="check-icon">✓</span> Mood Stabilizer Management</li>
-                                <li><span class="check-icon">✓</span> Regular Monitoring & Adjustments</li>
-                                <li><span class="check-icon">✓</span> Psychoeducation & Lifestyle Counseling</li>
-                                <li><span class="check-icon">✓</span> Crisis Prevention Planning</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Mood Stabilizer
+                                    Management</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Regular Monitoring &
+                                    Adjustments</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Psychoeducation &
+                                    Lifestyle Counseling</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Crisis Prevention
+                                    Planning</li>
                             </ul>
-                            <a href="#" class="btn btn-primary">Learn More About Bipolar Treatment →</a>
+                            <a href="#" class="btn btn-primary">Learn More About Bipolar Treatment</a>
                         </div>
                         <div class="slide-image">
                             <img src="img/Bipolar.webp" alt="Bipolar Treatment">
@@ -319,12 +343,16 @@
                                 hyperactivity disorder in adults, with personalized medication and behavioral
                                 strategies.</p>
                             <ul class="treatment-list">
-                                <li><span class="check-icon">✓</span> Comprehensive ADHD Assessment</li>
-                                <li><span class="check-icon">✓</span> Stimulant & Non-Stimulant Options</li>
-                                <li><span class="check-icon">✓</span> Executive Function Coaching</li>
-                                <li><span class="check-icon">✓</span> Time Management & Organization Skills</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Comprehensive ADHD
+                                    Assessment</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Stimulant &
+                                    Non-Stimulant Options</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Executive Function
+                                    Coaching</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Time Management &
+                                    Organization Skills</li>
                             </ul>
-                            <a href="#" class="btn btn-primary">Learn More About ADHD Treatment →</a>
+                            <a href="#" class="btn btn-primary">Learn More About ADHD Treatment</a>
                         </div>
                         <div class="slide-image">
                             <img src="img/ADHD.webp" alt="ADHD Treatment">
@@ -340,12 +368,16 @@
                                 experiencing
                                 suicidal thoughts, with crisis intervention and comprehensive safety planning.</p>
                             <ul class="treatment-list">
-                                <li><span class="check-icon">✓</span> Immediate Crisis Assessment</li>
-                                <li><span class="check-icon">✓</span> Safety Planning & Risk Management</li>
-                                <li><span class="check-icon">✓</span> Intensive TMS Therapy Protocol</li>
-                                <li><span class="check-icon">✓</span> 24/7 Crisis Support Resources</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Immediate Crisis
+                                    Assessment</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Safety Planning & Risk
+                                    Management</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> Intensive TMS Therapy
+                                    Protocol</li>
+                                <li><span class="check-icon"><i class="fa fa-check"></i></span> 24/7 Crisis Support
+                                    Resources</li>
                             </ul>
-                            <a href="#" class="btn btn-primary">Learn More About Crisis Support →</a>
+                            <a href="#" class="btn btn-primary">Learn More About Crisis Support</a>
                         </div>
                         <div class="slide-image">
                             <img src="img/Suicidal-Ideation.webp" alt="Suicidal Ideation Support">
@@ -410,7 +442,7 @@
                         <div class="process-card-content">
                             <h3>Treatment Delivery</h3>
                             <p>Receive comfortable 20-30 minute TMS sessions, 5 days a week for 4-6 weeks. No
-                                downtime—return to your daily activities immediately.</p>
+                                downtimeâ€”return to your daily activities immediately.</p>
                         </div>
                     </div>
 
@@ -438,13 +470,13 @@
                         <h2>Prioritize your health and your family's well-being today!</h2>
                     </div>
                     <div class="cta-rating">
-                        <div class="rating-number">4.7</div>
+                        <div class="rating-number">5.0</div>
                         <div class="rating-text">
-                            <strong>Google Overall Rating</strong> based on<br>3185 reviews
+                            <strong>Google Overall Rating</strong> based on<br>100 reviews
                         </div>
                     </div>
                     <div class="cta-button-wrapper">
-                        <a href="#" class="btn btn-cta-appointment">Schedule an Appointment →</a>
+                        <a href="#" class="btn btn-cta-appointment">Schedule an Appointment</a>
                     </div>
                 </div>
             </div>
@@ -538,40 +570,40 @@
 
                 <div class="why-choose-grid">
                     <div class="why-card">
-                        <div class="why-icon">🧠</div>
+                        <div class="why-icon"></div>
                         <h3>Expert TMS Specialists</h3>
                         <p>Our team is specially trained in the latest TMS technology and techniques, ensuring you
                             receive
                             the highest quality care.</p>
                     </div>
                     <div class="why-card">
-                        <div class="why-icon">💙</div>
+                        <div class="why-icon"></div>
                         <h3>Compassionate Approach</h3>
                         <p>We create a judgment-free environment where you feel heard, understood, and supported
                             throughout
                             your journey.</p>
                     </div>
                     <div class="why-card">
-                        <div class="why-icon">🎯</div>
+                        <div class="why-icon"></div>
                         <h3>Personalized Treatment</h3>
                         <p>Every patient is unique. We customize treatment plans to address your specific needs and
                             mental
                             health goals.</p>
                     </div>
                     <div class="why-card">
-                        <div class="why-icon">🏥</div>
+                        <div class="why-icon"></div>
                         <h3>Comprehensive Care</h3>
                         <p>From TMS therapy to medication management and counseling, we offer a full spectrum of mental
                             health services.</p>
                     </div>
                     <div class="why-card">
-                        <div class="why-icon">✅</div>
+                        <div class="why-icon"></div>
                         <h3>Proven Results</h3>
                         <p>Our evidence-based treatments have helped thousands of patients overcome treatment-resistant
                             depression and anxiety.</p>
                     </div>
                     <div class="why-card">
-                        <div class="why-icon">🛡️</div>
+                        <div class="why-icon"></div>
                         <h3>Insurance Accepted</h3>
                         <p>We work with all major insurance providers to make quality mental health care accessible and
                             affordable.</p>
@@ -607,17 +639,35 @@
                         <img src="https://www.optionspa.com/wp-content/uploads/2023/11/highmark-thumb-300x150.png"
                             alt="Highmark">
                     </div>
+                    <div class="insurance-reassurance">
+                        <div class="reassurance-item">
+                            <span class="reassurance-icon">✓</span>
+                            <span>Most major insurances accepted</span>
+                        </div>
+                        <div class="reassurance-item">
+                            <span class="reassurance-icon">✓</span>
+                            <span>Flexible payment options available</span>
+                        </div>
+                        <div class="reassurance-item">
+                            <span class="reassurance-icon">✓</span>
+                            <span>We verify coverage before treatment begins</span>
+                        </div>
+                    </div>
 
                 </div>
-            </div>
+
         </section>
 
+
+
         <!-- Section 6: Relaxing CTA -->
+
         <section id="relax-cta" class="section-relax-cta">
             <div class="container">
                 <div class="relax-cta-content">
                     <h2>Take the First Step Toward a Better Tomorrow</h2>
-                    <p>You don't have to face depression alone. Our compassionate team is here to help you find relief
+                    <p>You don't have to face depression alone. Our compassionate team is here to help you
+                        find relief
                         and
                         reclaim your life.</p>
                     <div class="cta-buttons">
@@ -626,34 +676,46 @@
                     </div>
                 </div>
             </div>
+
+
         </section>
 
         <!-- Section 8: Testimonials (Slider) -->
+
+
+
         <section id="testimonials" class="section-testimonials">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2>Hear From People Just Like You</h2>
-                    <p>Real patients sharing their journey from struggle to recovery</p>
+                    <h2 style="color: #000;">Hear From People Just Like You</h2>
+                    <p style="color: #000;">Real patients sharing their journey from struggle to recovery</p>
                 </div>
 
                 <div class="testimonials-slider">
                     <div class="testimonial-track">
                         <div class="testimonial-card active">
-                            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                            <p class="testimonial-text">"After years of trying different medications with no success,
+                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"After years of trying different medications with no
+                                success,
                                 TMS
-                                therapy at Options Psychiatry changed my life. Dr. Crawford and her team made me feel
-                                comfortable throughout the entire process. I finally feel like myself again."</p>
+                                therapy at Options Psychiatry changed my life. Dr. Crawford and her team
+                                made me feel
+                                comfortable throughout the entire process. I finally feel like myself
+                                again."</p>
                             <div class="testimonial-author">
                                 <strong>Sarah M.</strong>
                                 <span>Depression Patient</span>
                             </div>
                         </div>
                         <div class="testimonial-card">
-                            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                            <p class="testimonial-text">"The care I received was exceptional. Dr. Crawford took the time
+                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"The care I received was exceptional. Dr. Crawford
+                                took the time
                                 to
-                                really listen to my concerns and created a personalized treatment plan. TMS therapy was
+                                really listen to my concerns and created a personalized treatment plan. TMS
+                                therapy was
                                 non-invasive and fit perfectly into my busy schedule. Highly recommend!"</p>
                             <div class="testimonial-author">
                                 <strong>Michael R.</strong>
@@ -661,10 +723,14 @@
                             </div>
                         </div>
                         <div class="testimonial-card">
-                            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                            <p class="testimonial-text">"I was skeptical about TMS at first, but the results speak for
-                                themselves. I've been depression-free for over a year now. The entire staff at Options
-                                Psychiatry is professional, caring, and genuinely invested in your recovery."</p>
+                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="testimonial-text">"I was skeptical about TMS at first, but the results
+                                speak for
+                                themselves. I've been depression-free for over a year now. The entire staff
+                                at Options
+                                Psychiatry is professional, caring, and genuinely invested in your
+                                recovery."</p>
                             <div class="testimonial-author">
                                 <strong>Jennifer L.</strong>
                                 <span>Treatment-Resistant Depression</span>
@@ -672,38 +738,42 @@
                         </div>
                     </div>
                     <div class="testimonial-controls">
-                        <button class="testimonial-prev">❮</button>
+                        <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
                         <div class="testimonial-dots">
                             <span class="dot active"></span>
                             <span class="dot"></span>
                             <span class="dot"></span>
                         </div>
-                        <button class="testimonial-next">❯</button>
+                        <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Section 9: Contact (Form Left, Info Right) -->
+
+
+
         <section id="contact" class="section-contact">
             <div class="container">
                 <div class="contact-card">
                     <div class="contact-info-wrapper">
                         <h2>Get in Touch</h2>
-                        <p class="contact-subtitle">Ready to take the next step? Fill out the form or give us a call.
+                        <p class="contact-subtitle">Ready to take the next step? Fill out the form or give
+                            us a call.
                             We're here to help.</p>
 
                         <div class="contact-info-items">
 
                             <div class="contact-info-item">
-                                <div class="contact-icon">📍</div>
+                                <div class="contact-icon"><i class="fa fa-map-marker"></i></div>
                                 <div>
                                     <strong>Visit Us</strong>
                                     <p>123 Medical Center Dr, Suite 200<br>Reading, PA 19606</p>
                                 </div>
                             </div>
                             <div class="contact-info-item">
-                                <div class="contact-icon">📞</div>
+                                <div class="contact-icon"><i class="fa fa-phone"></i></div>
                                 <div>
                                     <strong>Call Us</strong>
                                     <p><a href="tel:6107416567">(610) 741-6567</a></p>
@@ -711,10 +781,11 @@
                                 </div>
                             </div>
                             <div class="contact-info-item">
-                                <div class="contact-icon">✉️</div>
+                                <div class="contact-icon"><i class="fa fa-envelope"></i></div>
                                 <div>
                                     <strong>Email Us</strong>
-                                    <p><a href="mailto:help@optionspsychiatry.com">help@optionspsychiatry.com</a></p>
+                                    <p><a href="mailto:help@optionspsychiatry.com">help@optionspsychiatry.com</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -748,12 +819,32 @@
                                     required></textarea>
                             </div>
                             <button type="submit" class="btn btn-submit">Send Message</button>
+
+                            <p class="form-helper-text">Our team will contact you within 1 business day to
+                                discuss next steps.</p>
                         </form>
                     </div>
                 </div>
+
+
+
+                <!-- Google Maps -->
+
+                <div class="contact-map">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15969.666946397529!2d-76.0139854850817!3d40.34395264874572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c673dc5fa585f5%3A0x22e450b630c45849!2sOptions%20Psychiatry%20-%20TMS%20Therapy!5e1!3m2!1sen!2sin!4v1765883908094!5m2!1sen!2sin"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+            </div>
             </div>
         </section>
         <!-- Section 10: FAQ -->
+
+
+
         <section id="faq" class="section-faq">
             <div class="container">
                 <div class="section-header text-center">
@@ -768,11 +859,14 @@
                             <span class="faq-toggle">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>TMS (Transcranial Magnetic Stimulation) is a non-invasive treatment that uses magnetic
+                            <p>TMS (Transcranial Magnetic Stimulation) is a non-invasive treatment that uses
+                                magnetic
                                 pulses
-                                to stimulate nerve cells in areas of the brain that control mood. The magnetic pulses
+                                to stimulate nerve cells in areas of the brain that control mood. The
+                                magnetic pulses
                                 are
-                                similar to those used in MRI machines. TMS is FDA-cleared for treating major depression,
+                                similar to those used in MRI machines. TMS is FDA-cleared for treating major
+                                depression,
                                 especially in patients who haven't responded well to antidepressants.</p>
                         </div>
                     </div>
@@ -783,10 +877,13 @@
                             <span class="faq-toggle">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>Yes, most major insurance plans cover TMS therapy, including Medicare, BlueCross
+                            <p>Yes, most major insurance plans cover TMS therapy, including Medicare,
+                                BlueCross
                                 BlueShield,
-                                Aetna, Cigna, United Healthcare, and many others. Our team will work directly with your
-                                insurance provider to obtain pre-authorization and verify your coverage before starting
+                                Aetna, Cigna, United Healthcare, and many others. Our team will work
+                                directly with your
+                                insurance provider to obtain pre-authorization and verify your coverage
+                                before starting
                                 treatment.</p>
                         </div>
                     </div>
@@ -797,11 +894,13 @@
                             <span class="faq-toggle">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>Each TMS session typically lasts 20-30 minutes. Most patients undergo treatment 5 days a
+                            <p>Each TMS session typically lasts 20-30 minutes. Most patients undergo
+                                treatment 5 days a
                                 week
-                                for 4-6 weeks. You remain awake and alert during the entire session, and can return to
+                                for 4-6 weeks. You remain awake and alert during the entire session, and can
+                                return to
                                 your
-                                normal activities immediately afterward—no downtime required.</p>
+                                normal activities immediately afterwardâ€”no downtime required.</p>
                         </div>
                     </div>
 
@@ -811,11 +910,15 @@
                             <span class="faq-toggle">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>TMS is generally well-tolerated. Most patients experience only mild discomfort during the
-                                session, such as a tapping sensation on the scalp. The most common side effect is a mild
-                                headache or scalp discomfort, which typically improves after the first few sessions.
+                            <p>TMS is generally well-tolerated. Most patients experience only mild
+                                discomfort during the
+                                session, such as a tapping sensation on the scalp. The most common side
+                                effect is a mild
+                                headache or scalp discomfort, which typically improves after the first few
+                                sessions.
                                 Unlike
-                                medications, TMS has no systemic side effects like weight gain, sexual dysfunction, or
+                                medications, TMS has no systemic side effects like weight gain, sexual
+                                dysfunction, or
                                 drowsiness.</p>
                         </div>
                     </div>
@@ -826,12 +929,16 @@
                             <span class="faq-toggle">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>TMS therapy is ideal for adults with major depressive disorder who haven't achieved
-                                satisfactory improvement from antidepressant medications. It's particularly beneficial
+                            <p>TMS therapy is ideal for adults with major depressive disorder who haven't
+                                achieved
+                                satisfactory improvement from antidepressant medications. It's particularly
+                                beneficial
                                 for
-                                those experiencing treatment-resistant depression. During your consultation, Dr.
+                                those experiencing treatment-resistant depression. During your consultation,
+                                Dr.
                                 Crawford
-                                will evaluate your medical history and symptoms to determine if TMS is right for you.
+                                will evaluate your medical history and symptoms to determine if TMS is right
+                                for you.
                             </p>
                         </div>
                     </div>
@@ -842,9 +949,12 @@
                             <span class="faq-toggle">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>Many patients begin to notice improvements in their mood and symptoms within 2-4 weeks of
-                                starting treatment. However, the full benefits of TMS therapy are typically seen after
-                                completing the full course of treatment (4-6 weeks). Some patients experience lasting
+                            <p>Many patients begin to notice improvements in their mood and symptoms within
+                                2-4 weeks of
+                                starting treatment. However, the full benefits of TMS therapy are typically
+                                seen after
+                                completing the full course of treatment (4-6 weeks). Some patients
+                                experience lasting
                                 relief
                                 for months or even years after completing TMS.</p>
                         </div>
@@ -854,61 +964,66 @@
         </section>
 
         <!-- Footer -->
+
+
+
         <footer class="footer">
             <div class="container">
                 <div class="footer-content">
                     <div class="footer-column footer-brand">
                         <div class="footer-logo"><img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png"
                                 width="150px"></div>
-                        <p class="footer-description">Options provides education, support, and therapeutic options to
-                            those who are suffering from mental health disorders and symptoms. Our focus on TMS Therapy,
+                        <p class="footer-description">Options provides education, support, and therapeutic
+                            options to
+                            those who are suffering from mental health disorders and symptoms. Our focus on
+                            TMS Therapy,
                             Medications & Counseling helps us provide comprehensive and quality care.</p>
                         <div class="footer-social">
-                            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i>f</a>
+                            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         </div>
                     </div>
 
                     <div class="footer-column">
                         <h3 class="footer-title">QUICK LINKS</h3>
                         <ul class="footer-links">
-                            <li><a href="#">✓ Home</a></li>
-                            <li><a href="#">✓ About Us</a></li>
-                            <li><a href="#">✓ Blog</a></li>
-                            <li><a href="#">✓ TMS Therapy in Reading</a></li>
-                            <li><a href="#">✓ Medication Management in Reading</a></li>
-                            <li><a href="#">✓ Contact Us</a></li>
+                            <li><a href="#"> Home</a></li>
+                            <li><a href="#"> About Us</a></li>
+                            <li><a href="#"> Blog</a></li>
+                            <li><a href="#"> TMS Therapy in Reading</a></li>
+                            <li><a href="#"> Medication Management in Reading</a></li>
+                            <li><a href="#"> Contact Us</a></li>
                         </ul>
                     </div>
 
                     <div class="footer-column">
                         <h3 class="footer-title">CONDITIONS WE TREAT</h3>
                         <ul class="footer-links">
-                            <li><a href="#">✓ Depression</a></li>
-                            <li><a href="#">✓ Anxiety Disorders</a></li>
-                            <li><a href="#">✓ PTSD</a></li>
-                            <li><a href="#">✓ OCD</a></li>
-                            <li><a href="#">✓ Bipolar Disorder</a></li>
-                            <li><a href="#">✓ ADHD</a></li>
-                            <li><a href="#">✓ Suicidal Ideation</a></li>
+                            <li><a href="#"> Depression</a></li>
+                            <li><a href="#"> Anxiety Disorders</a></li>
+                            <li><a href="#"> PTSD</a></li>
+                            <li><a href="#"> OCD</a></li>
+                            <li><a href="#"> Bipolar Disorder</a></li>
+                            <li><a href="#"> ADHD</a></li>
+                            <li><a href="#"> Suicidal Ideation</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h3 class="footer-title">CONTACT INFO</h3>
                         <ul class="footer-contact">
                             <li>
-                                <span class="contact-icon">📍</span>
+                                <span class="contact-icon"><i class="fa fa-map-marker"></i></span>
                                 <span>2211 Quarry Drive, Suite E56 Reading PA 19606 United States</span>
                             </li>
                             <li>
-                                <span class="contact-icon">📞</span>
+                                <span class="contact-icon"><i class="fa fa-phone"></i></span>
                                 <span>(610) 741-6567</span>
                             </li>
                             <li>
-                                <span class="contact-icon">📠</span>
+                                <span class="contact-icon"><i class="fa fa-phone"></i></span>
                                 <span>(610) 741-6312</span>
                             </li>
                             <li>
-                                <span class="contact-icon">✉️</span>
+                                <span class="contact-icon"><i class="fa fa-envelope"></i></span>
                                 <span>help@optionspsychiatry.com</span>
                             </li>
                         </ul>
@@ -1057,7 +1172,7 @@
                 // Open clicked item if it wasn't active
                 if (!isActive) {
                     faqItem.classList.add('active');
-                    button.querySelector('.faq-toggle').textContent = '−';
+                    button.querySelector('.faq-toggle').textContent = 'âˆ’';
                 }
             });
         });

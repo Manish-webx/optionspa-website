@@ -1,4 +1,4 @@
-// Modern Scroll-Triggered Animations and Interactions
+﻿// Modern Scroll-Triggered Animations and Interactions
 
 // ============================================
 // 1. SCROLL-TRIGGERED FADE-IN ANIMATIONS
@@ -57,22 +57,22 @@ document.head.appendChild(style);
 // ============================================
 function addRippleEffect() {
     const buttons = document.querySelectorAll('.btn, .btn-primary, .btn-submit, .condition-tab');
-    
+
     buttons.forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             const ripple = document.createElement('span');
             const rect = this.getBoundingClientRect();
             const size = Math.max(rect.width, rect.height);
             const x = e.clientX - rect.left - size / 2;
             const y = e.clientY - rect.top - size / 2;
-            
+
             ripple.style.width = ripple.style.height = size + 'px';
             ripple.style.left = x + 'px';
             ripple.style.top = y + 'px';
             ripple.classList.add('ripple');
-            
+
             this.appendChild(ripple);
-            
+
             setTimeout(() => ripple.remove(), 600);
         });
     });
@@ -108,7 +108,7 @@ document.head.appendChild(rippleStyle);
 function addParallaxEffect() {
     const hero = document.querySelector('.hero-section');
     if (!hero) return;
-    
+
     window.addEventListener('scroll', () => {
         const scroll = window.pageYOffset;
         hero.style.transform = `translateY(${scroll * 0.5}px)`;
@@ -130,10 +130,10 @@ function animateCounters() {
                 const hasPlus = text.includes('+');
                 const hasPercent = text.includes('%');
                 const num = parseInt(text.replace(/[^0-9]/g, ''));
-                
+
                 let count = 0;
                 const increment = num / speed;
-                
+
                 const updateCount = () => {
                     count += increment;
                     if (count < num) {
@@ -163,7 +163,7 @@ function addSmoothScroll() {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
             if (href === '#' || href === '') return;
-            
+
             e.preventDefault();
             const target = document.querySelector(href);
             if (target) {
@@ -181,22 +181,22 @@ function addSmoothScroll() {
 // ============================================
 function initFAQ() {
     const faqQuestions = document.querySelectorAll('.faq-question');
-    
+
     faqQuestions.forEach(question => {
         question.addEventListener('click', () => {
             const item = question.parentElement;
             const isActive = item.classList.contains('active');
-            
+
             // Close all other items
             document.querySelectorAll('.faq-item').forEach(el => {
                 el.classList.remove('active');
                 el.querySelector('.faq-toggle').textContent = '+';
             });
-            
+
             // Toggle current item
             if (!isActive) {
                 item.classList.add('active');
-                question.querySelector('.faq-toggle').textContent = '−';
+                question.querySelector('.faq-toggle').textContent = 'âˆ’';
             }
         });
     });
@@ -209,14 +209,28 @@ function initMobileMenu() {
     const menuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const dropdownToggles = document.querySelectorAll('.dropdown > .nav-link');
-    
+
+    console.log('🍔 Mobile Menu Init:', {
+        menuToggle: menuToggle,
+        navMenu: navMenu,
+        dropdowns: dropdownToggles.length
+    });
+
     if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', () => {
+        console.log('✅ Menu elements found! Adding click listener...');
+        menuToggle.addEventListener('click', (e) => {
+            console.log('🔥 HAMBURGER CLICKED!');
             navMenu.classList.toggle('active');
             menuToggle.classList.toggle('active');
+            console.log('Menu active:', navMenu.classList.contains('active'));
+        });
+    } else {
+        console.error('❌ Menu elements NOT found!', {
+            toggle: !!menuToggle,
+            menu: !!navMenu
         });
     }
-    
+
     // Mobile dropdown functionality
     dropdownToggles.forEach(toggle => {
         toggle.addEventListener('click', (e) => {
@@ -235,11 +249,13 @@ function initMobileMenu() {
 document.addEventListener('DOMContentLoaded', () => {
     addScrollAnimations();
     addRippleEffect();
-    addParallaxEffect();
+    // addParallaxEffect(); // Removed per user request
     animateCounters();
     addSmoothScroll();
     initFAQ();
     initMobileMenu();
-    
-    console.log('🎨 Modern animations and interactions loaded');
+
+    console.log('ðŸŽ¨ Modern animations and interactions loaded');
 });
+
+
