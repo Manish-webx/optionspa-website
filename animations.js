@@ -190,13 +190,11 @@ function initFAQ() {
             // Close all other items
             document.querySelectorAll('.faq-item').forEach(el => {
                 el.classList.remove('active');
-                el.querySelector('.faq-toggle').textContent = '+';
             });
 
             // Toggle current item
             if (!isActive) {
                 item.classList.add('active');
-                question.querySelector('.faq-toggle').textContent = 'âˆ’';
             }
         });
     });
