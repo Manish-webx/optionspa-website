@@ -201,7 +201,23 @@ function initFAQ() {
 }
 
 // ============================================
-// 7. MOBILE MENU TOGGLE
+// 7. HEADER SCROLL EFFECT
+// ============================================
+function initHeaderScroll() {
+    const header = document.querySelector('.header');
+    if (!header) return;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+}
+
+// ============================================
+// 8. MOBILE MENU TOGGLE
 // ============================================
 function initMobileMenu() {
     const menuToggle = document.querySelector('.mobile-menu-toggle');
@@ -252,6 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
     addSmoothScroll();
     initFAQ();
     initMobileMenu();
+    initHeaderScroll();
 
     console.log('ðŸŽ¨ Modern animations and interactions loaded');
 });
