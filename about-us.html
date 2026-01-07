@@ -33,22 +33,8 @@
 
 <body>
 
-    <!-- Topbar -->
+    <!-- Header / Navigation -->
     <header class="header">
-        <div class="topbar">
-            <div class="container topbar-container">
-                <div class="topbar-info">
-                    <a href="tel:6107416567" class="topbar-link">
-                        <span class="topbar-icon"><i class="fa fa-phone"></i></span>
-                        (610) 741-6567
-                    </a>
-                    <a href="mailto:help@optionspsychiatry.com" class="topbar-link">
-                        <span class="topbar-icon"><i class="fa fa-envelope"></i></span>
-                        help@optionspsychiatry.com
-                    </a>
-                </div>
-            </div>
-        </div>
         <div class="container header-container">
             <div class="header-logo"><img
                     src="https://www.optionspa.com/wp-content/uploads/2022/04/OPTIONS-ADDICTION-RECOVERY.png"
@@ -61,20 +47,19 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">TMS Therapy</a></li>
+                            <li><a href="tms-therapy.html">TMS Therapy</a></li>
                             <li><a href="#">Medical Management</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Conditions <span class="dropdown-arrow">▼</span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Depression</a></li>
-                            <li><a href="#">Anxiety Disorders</a></li>
-                            <li><a href="#">PTSD</a></li>
+                            <li><a href="depression.html">Depression</a></li>
+                            <li><a href="anxiety.html">Anxiety Disorders</a></li>
+                            <li><a href="ptsd.html">PTSD</a></li>
                             <li><a href="#">OCD</a></li>
                             <li><a href="#">Bipolar Disorder</a></li>
                             <li><a href="#">ADHD</a></li>
-                            <li><a href="#">Suicidal Ideation</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -84,7 +69,7 @@
                             <li><a href="#">Insurance</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
 
@@ -155,7 +140,8 @@
         </section>
 
         <!-- How It Started Section -->
-        <section id="how-it-started" class="section-how-started" style="background-color: #FFF3EB;">
+        <section id="how-it-started" class="section-how-started"
+            style="background:linear-gradient(135deg, rgb(255, 245, 238) 0%, rgb(255, 223, 204) 100%)">
             <div class="container">
                 <div class="how-started-grid">
                     <div class="how-started-image">
@@ -204,18 +190,29 @@
             </div>
         </section>
 
-        <!-- About Doctor Section -->
+        <!-- Section 4: About Doctor -->
         <section id="about-doctor" class="section-doctor-profile">
             <div class="container">
                 <div class="doctor-profile-wrapper">
-                    <div class="doctor-profile-image">
-                        <img src="https://www.optionspa.com/wp-content/uploads/2022/04/Cyntrell-768x825.jpg"
-                            alt="Dr. Cyntrell Crawford">
+                    <div class="doctor-image-container">
+                        <div class="doctor-profile-image">
+                            <img src="https://www.optionspa.com/wp-content/uploads/2022/04/Cyntrell-768x825.jpg"
+                                alt="Dr. Cyntrell Crawford">
+                        </div>
                     </div>
                     <div class="doctor-profile-content">
-                        <span class="section-label">Meet Your Expert</span>
                         <h2>Dr. Cyntrell Crawford</h2>
-                        <p class="doctor-title">Double Board-Certified Psychiatrist</p>
+                        <p class="doctor-subtitle">Double Board-Certified Psychiatrist</p>
+
+                        <div class="doctor-badges-row">
+                            <span class="doc-badge doc-badge-purple"><i class="fas fa-certificate"></i> Board
+                                Certified</span>
+                            <span class="doc-badge doc-badge-orange"><i class="fas fa-brain"></i> TMS Specialist</span>
+                            <span class="doc-badge doc-badge-green"><i class="fas fa-leaf"></i> Integrative
+                                Medicine</span>
+                            <span class="doc-badge doc-badge-blue"><i class="fas fa-history"></i> 10+ Years
+                                Experience</span>
+                        </div>
 
                         <p class="doctor-bio">Dr. Crawford is a compassionate, double board-certified psychiatrist with
                             over 10 years of experience treating complex mental health conditions. She founded Options
@@ -226,38 +223,17 @@
                             psychiatry, Dr. Crawford combines evidence-based medicine with a personalized approach to
                             help each patient find their unique path to recovery.</p>
 
-                        <div class="doctor-credentials">
-                            <div class="credential-badge">
-                                <div class="credential-icon">🎓</div>
-                                <div>
-                                    <strong>Double Board Certified</strong>
-                                    <p>Psychiatry & Addiction Medicine</p>
-                                </div>
-                            </div>
-                            <div class="credential-badge">
-                                <div class="credential-icon">⚕️</div>
-                                <div>
-                                    <strong>TMS Certified</strong>
-                                    <p>Advanced TMS Training</p>
-                                </div>
-                            </div>
-                            <div class="credential-badge">
-                                <div class="credential-icon">📅</div>
-                                <div>
-                                    <strong>10+ Years Experience</strong>
-                                    <p>Treating Mental Health</p>
-                                </div>
-                            </div>
+                        <div class="doctor-actions">
+                            <a href="contact-us.html" class="btn btn-primary">Schedule a consultation</a>
                         </div>
-
-                        <a href="#" class="btn btn-primary">Book Appointment with Dr. Crawford</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Mission and Vision Section -->
-        <section id="mission-vision" class="section-mission-vision" style="background-color: #FFF3EB;">
+        <section id="mission-vision" class="section-mission-vision"
+            style="background: linear-gradient(135deg, rgb(255, 245, 238) 0%, rgb(255, 223, 204) 100%);">
             <div class="container">
                 <div class="section-header text-center">
                     <span class="section-label">Our Purpose</span>
@@ -387,11 +363,11 @@
                     <p>Find answers to common questions about Options Psychiatry</p>
                 </div>
 
-                <div class="faq-container">
+                <div class="faq-accordion">
                     <div class="faq-item">
                         <button class="faq-question">
                             <span>What makes Options Psychiatry different from other mental health clinics?</span>
-                            <i class="fa fa-chevron-down"></i>
+                            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer">
                             <p>Options Psychiatry stands out through our commitment to innovation and personalized care.
@@ -405,7 +381,7 @@
                     <div class="faq-item">
                         <button class="faq-question">
                             <span>What is Dr. Crawford's background and qualifications?</span>
-                            <i class="fa fa-chevron-down"></i>
+                            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer">
                             <p>Dr. Cyntrell Crawford is double board-certified in Psychiatry and Addiction Medicine. She
@@ -418,7 +394,7 @@
                     <div class="faq-item">
                         <button class="faq-question">
                             <span>Do you accept insurance?</span>
-                            <i class="fa fa-chevron-down"></i>
+                            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer">
                             <p>Yes! We accept most major insurance plans, including Medicare. Our team will work with
@@ -431,12 +407,12 @@
                     <div class="faq-item">
                         <button class="faq-question">
                             <span>What conditions do you treat at Options Psychiatry?</span>
-                            <i class="fa fa-chevron-down"></i>
+                            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer">
                             <p>We treat a wide range of mental health conditions, including major depression,
                                 treatment-resistant depression, anxiety disorders, PTSD, OCD, bipolar disorder, ADHD,
-                                and suicidal ideation. We also specialize in addiction psychiatry and dual diagnosis
+                                and bipolar disorder. We also specialize in addiction psychiatry and dual diagnosis
                                 treatment.</p>
                         </div>
                     </div>
@@ -444,7 +420,7 @@
                     <div class="faq-item">
                         <button class="faq-question">
                             <span>How do I schedule my first appointment?</span>
-                            <i class="fa fa-chevron-down"></i>
+                            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer">
                             <p>Scheduling your first appointment is easy! You can call us at (610) 741-6567 or email us
@@ -456,7 +432,7 @@
                     <div class="faq-item">
                         <button class="faq-question">
                             <span>What should I expect during my first visit?</span>
-                            <i class="fa fa-chevron-down"></i>
+                            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer">
                             <p>During your first visit, Dr. Crawford will conduct a comprehensive evaluation to
@@ -470,7 +446,7 @@
                     <div class="faq-item">
                         <button class="faq-question">
                             <span>Where is Options Psychiatry located?</span>
-                            <i class="fa fa-chevron-down"></i>
+                            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer">
                             <p>We're conveniently located in Reading, PA. Our state-of-the-art facility is designed to
@@ -482,7 +458,7 @@
                     <div class="faq-item">
                         <button class="faq-question">
                             <span>Are you accepting new patients?</span>
-                            <i class="fa fa-chevron-down"></i>
+                            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer">
                             <p>Yes! We are currently accepting new patients. We understand that starting mental health
@@ -499,30 +475,78 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Options Psychiatry</h3>
-                    <p>Leading mental health care provider in Reading, PA, specializing in TMS therapy and comprehensive
-                        psychiatric services.</p>
+            <div class="footer-top-centered">
+                <div class="footer-logo">
+                    <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
+                        width="180px">
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about-us.html">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
+                <p class="footer-description-centered">Options provides education, support, and therapeutic options
+                    to those who are suffering from mental health disorders and symptoms. Our focus on TMS Therapy,
+                    Medications & Counseling helps us provide comprehensive and quality care.</p>
+                <div class="footer-cta">
+                    <a href="contact-us.html" class="btn btn-contact-orange">Book An Appointment Today</a>
                 </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p><i class="fa fa-phone"></i> (610) 741-6567</p>
-                    <p><i class="fa fa-envelope"></i> help@optionspsychiatry.com</p>
-                    <p><i class="fa fa-map-marker"></i> Reading, PA</p>
+                <div class="footer-social-centered">
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
+
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-title">QUICK LINKS</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"> Home</a></li>
+                        <li><a href="about-us.html"> About Us</a></li>
+                        <li><a href="#"> Blog</a></li>
+                        <li><a href="tms-therapy.html"> TMS Therapy in Reading</a></li>
+                        <li><a href="#"> Medication Management in Reading</a></li>
+                        <li><a href="contact-us.html"> Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">CONDITIONS WE TREAT</h3>
+                    <ul class="footer-links">
+                        <li><a href="depression.html"> Depression</a></li>
+                        <li><a href="anxiety.html"> Anxiety Disorders</a></li>
+                        <li><a href="ptsd.html"> PTSD</a></li>
+                        <li><a href="#"> OCD</a></li>
+                        <li><a href="#"> Bipolar Disorder</a></li>
+                        <li><a href="#"> ADHD</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">CONTACT INFO</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="contact-icon"><i class="fa fa-map-marker"></i></span>
+                            <span>2211 Quarry Drive, Suite E56 Reading PA 19606 United States</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fa fa-phone"></i></span>
+                            <span>(610) 741-6567</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fa fa-phone"></i></span>
+                            <span>(610) 741-6312</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fa fa-envelope"></i></span>
+                            <span>help@optionspsychiatry.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2024 Options Psychiatry. All Rights Reserved.</p>
+                <p class="footer-copyright">© Copyright 2025, Options Addiction & Recovery</p>
+                <div class="footer-policies">
+                    <a href="#">HIPAA Policy</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Disclaimer</a>
+                </div>
             </div>
         </div>
     </footer>

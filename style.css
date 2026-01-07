@@ -2376,7 +2376,7 @@ img {
 /* Section 10: FAQ */
 /* Section 10: FAQ - Premium Modern Accordion */
 .section-faq {
-    padding: 80px 0;
+    padding: 40px 0;
     background: linear-gradient(135deg, rgb(255, 245, 238) 0%, rgb(255, 223, 204) 100%);
 }
 
@@ -2385,7 +2385,7 @@ img {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
 }
 
 .faq-item {
@@ -2419,7 +2419,7 @@ img {
     align-items: center;
     font-family: var(--font-main);
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--primary-dark);
     transition: all 0.3s ease;
 }

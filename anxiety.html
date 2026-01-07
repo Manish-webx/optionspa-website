@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anxiety Treatment Reading PA | Options Psychiatry</title>
+    <meta name="description"
+        content="Find lasting relief from anxiety, panic attacks, and OCD at Options Psychiatry. We offer specialized treatment programs, including TMS therapy, in Reading, PA.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================================
+           CORE VARIABLES & RESET
+           ========================================= */
+        :root {
+            --primary-dark: #0F2C3A;
+            --accent-orange: #FF7A15;
+            --text-main: #1A1A1A;
+            --text-muted: #5A6B7C;
+            --bg-white: #FFFFFF;
+            --bg-soft: #F4F7F9;
+            --bg-warm-gradient: linear-gradient(135deg, rgb(255, 245, 238) 0%, rgb(255, 223, 204) 100%);
+            --radius-xl: 32px;
+            --radius-lg: 20px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Barlow', sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--bg-white);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: var(--primary-dark);
+            line-height: 1.2;
+            font-weight: 400;
+            font-family: 'DM Serif Display', serif;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        h2 {
+            font-size: 2.75rem;
+            margin-bottom: 24px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            font-family: 'Barlow', sans-serif;
+            font-weight: 600;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 40px 0;
+            position: relative;
+        }
+
+        .bg-light {
+            background-color: var(--bg-soft);
+        }
+
+        .bg-warm {
+            background: var(--bg-warm-gradient);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Badge & Buttons */
+        .badge-pill {
+            display: inline-block;
+            background: rgba(255, 122, 21, 0.1);
+            color: var(--accent-orange);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            padding: 8px 16px;
+            border-radius: 50px;
+            margin-bottom: 24px;
+        }
+
+        .btn-hero-dark {
+            background: var(--accent-orange);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 10px 30px rgba(255, 122, 21, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-hero-dark:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 122, 21, 0.4);
+            background: #e06000;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            background: var(--bg-soft);
+            color: var(--text-main);
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-dark) !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted) !important;
+            margin-bottom: 40px;
+            opacity: 1 !important;
+        }
+
+        /* Symptom Cards */
+        .symptoms-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .symptom-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius-xl);
+            box-shadow: 0 10px 40px rgba(15, 44, 58, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .symptom-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-orange);
+            box-shadow: 0 20px 60px rgba(15, 44, 58, 0.1);
+        }
+
+        .symptom-icon {
+            font-size: 2.5rem;
+            color: var(--accent-orange);
+            margin-bottom: 20px;
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+            visibility: visible !important;
+        }
+
+        /* Immediate visibility for hero elements to ensure no content is hidden on load */
+        .hero-content,
+        .hero-form,
+        .hero-title,
+        .hero-subtitle,
+        .hero-features-grid {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+            visibility: visible !important;
+        }
+
+        /* Consultation Form Card */
+        .consultation-card {
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(15, 44, 58, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 16px;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            background: #F8FAFC;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--accent-orange);
+            color: white;
+            padding: 18px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background: #e06000;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Feature Grid Styling */
+        .hero-features-label {
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin: 30px 0 15px;
+            display: block;
+            font-size: 1.1rem;
+        }
+
+        .hero-features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .feature-item-card {
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid transparent;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-item-card:hover {
+            border-color: var(--accent-orange);
+            box-shadow: 0 8px 30px rgba(255, 122, 21, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon-circle {
+            width: 45px;
+            height: 45px;
+            background: #F0F4F7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-dark);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .feature-text h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+            color: var(--primary-dark);
+            font-weight: 700;
+            font-family: 'Barlow', sans-serif;
+        }
+
+        .feature-text p {
+            font-size: 0.85rem;
+            margin: 0;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Types & Signs Styling */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .type-card {
+            background: white;
+            padding: 35px;
+            border-radius: var(--radius-xl);
+            border-bottom: 4px solid #E2E8F0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        .type-card:hover {
+            border-color: var(--accent-orange);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(15, 44, 58, 0.08);
+        }
+
+        .type-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+
+        .type-card p {
+            font-size: 1rem;
+            margin-bottom: 0;
+            color: var(--text-muted);
+        }
+
+        .signs-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .sign-item {
+            display: flex;
+            gap: 20px;
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-lg);
+            align-items: center;
+        }
+
+        .sign-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--bg-warm-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-orange);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .sign-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            font-family: 'Barlow', sans-serif;
+            font-weight: 700;
+        }
+
+        .sign-text p {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        @media (max-width: 968px) {
+
+            .grid-3,
+            .signs-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .symptoms-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <div class="header-logo">
+                <a href="index.html">
+                    <img src="https://www.optionspa.com/wp-content/uploads/2022/04/OPTIONS-ADDICTION-RECOVERY.png"
+                        alt="Options Psychiatry Logo" style="width: 150px;">
+                </a>
+            </div>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about-us.html" class="nav-link">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tms-therapy.html">TMS Therapy</a></li>
+                            <li><a href="#">Medical Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Conditions <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="depression.html">Depression</a></li>
+                            <li><a href="anxiety.html">Anxiety Disorders</a></li>
+                            <li><a href="ptsd.html">PTSD</a></li>
+                            <li><a href="#">OCD</a></li>
+                            <li><a href="#">Bipolar Disorder</a></li>
+                            <li><a href="#">ADHD</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Resources <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Blogs</a></li>
+                            <li><a href="#">Insurance</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-content reveal">
+                    <span class="badge-pill">Specialized Anxiety Care</span>
+                    <h1 class="hero-title">Break Free from Worry. Find Your Calm.</h1>
+                    <p class="hero-subtitle">If persistent worry and intrusive thoughts are holding you back, we offer
+                        personalized, evidence-based treatments designed to help you reclaim your peace of mind.</p>
+
+                    <span class="hero-features-label">Our Core Benefits</span>
+                    <div class="hero-features-grid">
+                        <!-- Card 1 -->
+                        <div class="feature-item-card">
+                            <div class="feature-icon-circle">
+                                <i class="fa-solid fa-notes-medical"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Non-Invasive</h4>
+                                <p>No surgery & No anesthesia</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="feature-item-card">
+                            <div class="feature-icon-circle">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>FDA Cleared</h4>
+                                <p>Safe & Effective Therapy</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="feature-item-card">
+                            <div class="feature-icon-circle">
+                                <i class="fa-solid fa-ban"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>No Side Effects</h4>
+                                <p>No weight gain or drowsines</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="feature-item-card">
+                            <div class="feature-icon-circle">
+                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Insurance Covered</h4>
+                                <p>Medicare & Major Plans</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#get-started" class="btn-hero-dark">Book Your Consultation</a>
+                    </div>
+                </div>
+
+                <div class="hero-form reveal">
+                    <div class="consultation-card">
+                        <h3>Start Your Journey</h3>
+                        <p>Speak with our specialists about your path to recovery.</p>
+                        <form onsubmit="event.preventDefault(); alert('Request Submitted!');">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Full Name *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control" placeholder="Phone Number *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email Address">
+                            </div>
+                            <button type="submit" class="btn-submit">Request Call Back</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: Understanding Anxiety -->
+        <section class="section">
+            <div class="container"
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+                <div class="reveal">
+                    <img src="img/anxiety-journey.png" alt="Understanding Anxiety Journey"
+                        style="width: 100%; border-radius: 32px; box-shadow: 20px 20px 0px var(--bg-warm-gradient);">
+                </div>
+                <div class="reveal">
+                    <span class="badge-pill">Understanding the Condition</span>
+                    <h2>More Than Just Everyday Stress</h2>
+                    <p>Anxiety disorders are medical conditions that go beyond occasional nervousness. They involve
+                        persistent, excessive worry that can interfere with work, relationships, and health.</p>
+                    <p>At Options Psychiatry, we understand that anxiety has both biological and psychological roots.
+                        Our
+                        approach targets the neural pathways responsible for the "fight or flight" response, helping to
+                        restore balance and calm.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: EARLY SIGNS -->
+        <section class="section bg-warm">
+            <div class="container">
+                <div class="text-center reveal" style="max-width: 800px; margin: 0 auto 40px;">
+                    <span class="badge-pill">Early Detection</span>
+                    <h2>Early Warning Signs of Anxiety</h2>
+                    <p>Recognizing the early signs of anxiety can help you seek treatment sooner, preventing symptoms
+                        from escalating and improving your long-term wellness.</p>
+                </div>
+
+                <div class="signs-row">
+                    <div class="sign-item reveal">
+                        <div class="sign-icon"><i class="fa-solid fa-wind"></i></div>
+                        <div class="sign-text">
+                            <h4>Shortness of Breath</h4>
+                            <p>Feeling like you can't get enough air or experiencing chest tightness.</p>
+                        </div>
+                    </div>
+                    <div class="sign-item reveal">
+                        <div class="sign-icon"><i class="fa-solid fa-brain"></i></div>
+                        <div class="sign-text">
+                            <h4>Racing Thoughts</h4>
+                            <p>A mind that feels "noisy" or uncontrollable worry about future events.</p>
+                        </div>
+                    </div>
+                    <div class="sign-item reveal">
+                        <div class="sign-icon"><i class="fa-solid fa-bed"></i></div>
+                        <div class="sign-text">
+                            <h4>Restlessness</h4>
+                            <p>Feeling "keyed up" or unable to sit still and relax.</p>
+                        </div>
+                    </div>
+                    <div class="sign-item reveal">
+                        <div class="sign-icon"><i class="fa-solid fa-stomach"></i></div>
+                        <div class="sign-text">
+                            <h4>Digestive Issues</h4>
+                            <p>Frequent stomach aches, nausea, or changes in digestion linked to stress.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Symptoms -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="text-center reveal" style="max-width: 800px; margin: 0 auto 40px;">
+                    <span class="badge-pill">Know the Signs</span>
+                    <h2>How Anxiety Manifests</h2>
+                    <p>Anxiety symptoms can be diverse, affecting your body, your emotions, and your cognitive
+                        abilities.</p>
+                </div>
+
+                <div class="symptoms-grid">
+                    <div class="symptom-card reveal">
+                        <div class="symptom-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                        <h3>Physical</h3>
+                        <p>Rapid heart rate, sweating, trembling, muscle tension, and fatigue.</p>
+                    </div>
+                    <div class="symptom-card reveal" style="transition-delay: 0.1s;">
+                        <div class="symptom-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                        <h3>Emotional</h3>
+                        <p>Feelings of dread, panic, irritability, or being constantly on edge.</p>
+                    </div>
+                    <div class="symptom-card reveal" style="transition-delay: 0.2s;">
+                        <div class="symptom-icon"><i class="fa-solid fa-eye"></i></div>
+                        <h3>Behavioral</h3>
+                        <p>Avoiding social situations, difficulty concentrating, or compulsive behaviors to reduce
+                            stress.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: TYPES OF ANXIETY -->
+        <section class="section bg-warm">
+            <div class="container">
+                <div class="text-center reveal" style="max-width: 800px; margin: 0 auto 40px;">
+                    <span class="badge-pill">Clinical Categories</span>
+                    <h2>Common Types of Anxiety Disorders</h2>
+                    <p>Anxiety comes in many forms. Understanding your specific diagnosis is the first step toward
+                        effective relief.</p>
+                </div>
+
+                <div class="grid-3">
+                    <div class="type-card reveal">
+                        <h3>Generalized Anxiety (GAD)</h3>
+                        <p>Persistent and excessive worry about various aspects of daily life, even when there's no
+                            clear reason for concern.</p>
+                    </div>
+                    <div class="type-card reveal" style="transition-delay: 0.1s;">
+                        <h3>Panic Disorder</h3>
+                        <p>Characterized by sudden, repeated episodes of intense fear combined with severe physical
+                            symptoms.</p>
+                    </div>
+                    <div class="type-card reveal" style="transition-delay: 0.2s;">
+                        <h3>Social Anxiety Disorder</h3>
+                        <p>Intense fear of being watched, judged, or embarrassed in social situations, leading to
+                            avoidance.</p>
+                    </div>
+                    <div class="type-card reveal" style="transition-delay: 0.3s;">
+                        <h3>Specific Phobias</h3>
+                        <p>An overwhelming and unreasonable fear of objects or situations that pose little real danger.
+                        </p>
+                    </div>
+                    <div class="type-card reveal" style="transition-delay: 0.4s;">
+                        <h3>OCD</h3>
+                        <p>Intrusive thoughts (obsessions) that lead to repetitive behaviors (compulsions) to manage the
+                            resulting anxiety.</p>
+                    </div>
+                    <div class="type-card reveal" style="transition-delay: 0.5s;">
+                        <h3>PTSD</h3>
+                        <p>A condition triggered by experiencing or witnessing a terrifying event, causing flashbacks
+                            and severe anxiety.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Advanced Solutions for Recovery -->
+        <section id="treatment" class="section">
+            <div class="container"
+                style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center;">
+                <div class="reveal">
+                    <span class="badge-pill">Breakthrough Relief</span>
+                    <h2>Innovative Solutions for Lasting Calm</h2>
+                    <p>For many, traditional talk therapy and medications are only part of the solution. We offer
+                        advanced treatments for patients seeking more comprehensive anxiety management.</p>
+                    <p>Our **TMS (Transcranial Magnetic Stimulation)** protocols are designed to modulate the areas of
+                        the brain that have become overactive in anxiety disorders. By calming these neural pathways, we
+                        can help you find lasting relief without the systemic side effects of medication.</p>
+                    <ul style="list-style: none; margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
+                        <li style="display: flex; gap: 15px; align-items: center;">
+                            <i class="fa-solid fa-circle-check" style="color: var(--accent-orange);"></i>
+                            <span>Non-drug approach: No risk of dependency or brain fog</span>
+                        </li>
+                        <li style="display: flex; gap: 15px; align-items: center;">
+                            <i class="fa-solid fa-circle-check" style="color: var(--accent-orange);"></i>
+                            <span>Non-invasive: No downtime or recovery period</span>
+                        </li>
+                        <li style="display: flex; gap: 15px; align-items: center;">
+                            <i class="fa-solid fa-circle-check" style="color: var(--accent-orange);"></i>
+                            <span>Proven effective for treatment-resistant anxiety and OCD</span>
+                        </li>
+                    </ul>
+                    <div style="margin-top: 40px;">
+                        <a href="tms-therapy.html" class="btn-hero-dark">Learn More About TMS</a>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <img src="img/anxiety-hero.png" alt="Peaceful Recovery"
+                        style="width: 100%; border-radius: 32px; box-shadow: -20px 20px 50px rgba(0,0,0,0.15);">
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section-faq bg-light">
+            <div class="container">
+                <div class="text-center reveal" style="max-width: 800px; margin: 0 auto 40px;">
+                    <span class="badge-pill">Questions & Answers</span>
+                    <h2>Anxiety Disorder FAQ</h2>
+                </div>
+
+                <div class="faq-accordion reveal">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How do I know if my anxiety is "normal" or a disorder?</span>
+                            <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Anxiety becomes a disorder when it is persistent, excessive, and significantly interferes
+                                with your daily functioning, sleep, or quality of life. If you find yourself avoiding
+                                situations or feeling constantly overwhelmed, a clinical evaluation is recommended.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Does TMS work for anxiety?</span>
+                            <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. TMS is FDA-cleared for OCD and is frequently used off-label with great success for
+                                generalized anxiety and panic disorders by targeting the areas of the brain responsible
+                                for mood regulation.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What should I expect during my first visit?</span>
+                            <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Your first visit involves a comprehensive psychiatric evaluation. We discuss your medical
+                                history, current symptoms, and previous treatments to create a personalized recovery
+                                plan tailored specifically to your needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top-centered">
+                <div class="footer-logo">
+                    <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
+                        width="180px">
+                </div>
+                <p class="footer-description-centered">Professional psychiatric care focused on long-term wellness and
+                    innovative recovery solutions in Reading, PA.</p>
+                <div class="footer-cta">
+                    <a href="contact-us.html" class="btn btn-contact-orange">Book An Appointment Today</a>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-title">QUICK LINKS</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"> Home</a></li>
+                        <li><a href="about-us.html"> About Us</a></li>
+                        <li><a href="tms-therapy.html"> TMS Therapy</a></li>
+                        <li><a href="contact-us.html"> Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">CONDITIONS</h3>
+                    <ul class="footer-links">
+                        <li><a href="depression.html"> Depression</a></li>
+                        <li><a href="anxiety.html"> Anxiety</a></li>
+                        <li><a href="ptsd.html"> PTSD</a></li>
+                        <li><a href="#"> OCD</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">CONTACT</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fa fa-map-marker"></i> 2211 Quarry Drive, Suite E56 Reading PA 19606</li>
+                        <li><i class="fa fa-phone"></i> (610) 741-6567</li>
+                        <li><i class="fa fa-envelope"></i> help@optionspsychiatry.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© Copyright 2025, Options Addiction & Recovery. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="animations.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Local Reveal Logic
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // Hero immediate reveal
+            document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('active'));
+
+            // FAQ Accordion
+            const questions = document.querySelectorAll('.faq-question');
+            questions.forEach(q => {
+                q.addEventListener('click', () => {
+                    const item = q.parentElement;
+                    const wasActive = item.classList.contains('active');
+
+                    // Close others
+                    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+
+                    if (!wasActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -17,24 +17,20 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 
     <style>
         /* =========================================
            CORE VARIABLES & RESET
            ========================================= */
         :root {
+            /* Synchronized with style.css */
             --primary-dark: #0F2C3A;
-            --primary-light: #16425B;
             --accent-orange: #FF7A15;
-            --accent-soft: #ff9d54;
             --text-main: #1A1A1A;
             --text-muted: #5A6B7C;
             --bg-white: #FFFFFF;
-            --bg-light: #F8FAFC;
-            --bg-warm: #FFF3EB;
-            --gradient-hero: linear-gradient(135deg, rgba(15, 44, 58, 0.95) 0%, rgba(22, 66, 91, 0.9) 100%);
-            --shadow-card: 0 10px 40px -10px rgba(15, 44, 58, 0.1);
-            --shadow-hover: 0 20px 60px -10px rgba(15, 44, 58, 0.2);
+            --bg-warm-gradient: linear-gradient(135deg, rgb(255, 245, 238) 0%, rgb(255, 223, 204) 100%);
             --radius-xl: 32px;
             --radius-lg: 20px;
         }
@@ -63,7 +59,8 @@
         h4 {
             color: var(--primary-dark);
             line-height: 1.2;
-            font-weight: 700;
+            font-weight: 400;
+            font-family: 'DM Serif Display', serif;
         }
 
         h1,
@@ -84,7 +81,7 @@
             font-size: 1.5rem;
             margin-bottom: 16px;
             font-family: 'Barlow', sans-serif;
-            font-weight: 800;
+            font-weight: 600;
         }
 
         p {
@@ -112,11 +109,11 @@
         }
 
         .bg-light {
-            background-color: var(--bg-light);
+            background-color: var(--bg-soft);
         }
 
         .bg-warm {
-            background-color: var(--bg-warm);
+            background: var(--bg-warm-gradient);
         }
 
         .text-center {
@@ -184,8 +181,8 @@
         /* Hero (New Split Layout) */
         .hero {
             min-height: auto;
-            padding: 80px 0;
-            background-color: var(--bg-light);
+            padding: 154px 0 80px;
+            background: #F4F7F9;
             color: var(--text-main);
             display: block;
         }
@@ -225,14 +222,14 @@
         .hero-title {
             font-size: 3rem;
             margin: 0;
-            color: #1A281B;
+            color: var(--primary-dark);
             line-height: 1.1;
         }
 
         .hero-subtitle {
-            color: #5F6368;
-            font-size: 1.1rem;
-            margin-top: 15px;
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            margin: 15px 0px;
             max-width: 600px;
         }
 
@@ -317,19 +314,23 @@
         .btn-hero-dark {
             background: var(--accent-orange);
             color: white;
-            padding: 16px 32px;
-            border-radius: 30px;
-            font-weight: 600;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 700;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            transition: 0.3s;
+            gap: 12px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 10px 30px rgba(255, 122, 21, 0.3);
+            border: none;
+            cursor: pointer;
         }
 
         .btn-hero-dark:hover {
-            background: #0a1f29;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 122, 21, 0.4);
+            background: #e06000;
         }
 
         .btn-hero-light {
@@ -419,21 +420,22 @@
 
         .btn-submit {
             width: 100%;
-            background: var(--primary-dark);
-            /* Dark Greenish for Submit */
+            background: var(--accent-orange);
             color: white;
-            padding: 16px;
+            padding: 18px;
             border: none;
-            border-radius: 27px;
-            font-size: 1rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
             font-weight: 700;
             cursor: pointer;
-            transition: 0.3s;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 10px 25px rgba(255, 122, 21, 0.3);
         }
 
         .btn-submit:hover {
-            background: #142b1c;
-            transform: translateY(-2px);
+            background: #e06000;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 122, 21, 0.4);
         }
 
         @media (max-width: 968px) {
@@ -628,16 +630,17 @@
             }
         }
 
-        /* Animate on Scroll */
+        /* Scroll Reveal (Managed locally for performance) */
         .reveal {
             opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s ease;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
         .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+            visibility: visible !important;
         }
 
         /* FDA Block */
@@ -861,7 +864,7 @@
 
         /* CTA Banner */
         .cta-banner {
-            background: #F8FAFC;
+            background: var(--bg-warm-gradient);
             border-left: 5px solid var(--accent-orange);
             border-radius: 12px;
             padding: 40px;
@@ -892,68 +895,60 @@
             }
         }
 
-        /* FAQ Section */
-        .accordion-wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .accordion-item {
-            border-bottom: 1px solid #E0E0E0;
-            margin-bottom: 10px;
-        }
-
-        .accordion-btn {
-            width: 100%;
-            text-align: left;
-            background: none;
-            border: none;
-            padding: 20px 0;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--primary-dark);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: 0.3s;
-            font-family: inherit;
-            line-height: 1.4;
-        }
-
-        .accordion-btn:hover {
-            color: var(--accent-orange);
-        }
-
-        .accordion-content {
-            height: 0;
-            overflow: hidden;
-            transition: height 0.3s ease;
-        }
-
-        .accordion-content-inner {
-            padding-bottom: 20px;
-            color: #5A6B7C;
-            line-height: 1.6;
-        }
-
-        .accordion-btn i {
-            transition: transform 0.3s ease;
-        }
-
-        .accordion-item.active .accordion-btn {
-            color: var(--accent-orange);
-        }
-
-        .accordion-item.active .accordion-btn i {
-            transform: rotate(180deg);
-        }
+        /* FAQ / Accordion Section Removed and using style.css defaults */
     </style>
 </head>
 
 <body>
 
-    <!-- HERO SECTION (No Global Header) -->
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="header-logo"><img
+                    src="https://www.optionspa.com/wp-content/uploads/2022/04/OPTIONS-ADDICTION-RECOVERY.png"
+                    style="width: 150px;"></div>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about-us.html" class="nav-link">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tms-therapy.html">TMS Therapy</a></li>
+                            <li><a href="#">Medical Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Conditions <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="depression.html">Depression</a></li>
+                            <li><a href="anxiety.html">Anxiety Disorders</a></li>
+                            <li><a href="ptsd.html">PTSD</a></li>
+                            <li><a href="#">OCD</a></li>
+                            <li><a href="#">Bipolar Disorder</a></li>
+                            <li><a href="#">ADHD</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Resources <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Blogs</a></li>
+                            <li><a href="#">Insurance</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
     <!-- HERO SECTION (Split Layout) -->
     <section class="hero">
         <div class="container hero-container">
@@ -1094,9 +1089,9 @@
     </section>
 
     <!-- WHY CHOOSE US (New Section) -->
-    <section class="section" style="background-color: #FFF3EB;">
+    <section class="section bg-warm">
         <div class="container">
-            <div class="text-center reveal" style="max-width: 900px; margin: 0 auto 60px;">
+            <div class="text-center reveal" style="max-width: 900px; margin: 0 auto 40px;">
                 <span class="badge-pill">The Options Psychiatry Difference</span>
                 <h2>Why Choose Us for TMS?</h2>
                 <p>Choosing the right provider is crucial. We combine clinical expertise with compassionate care to
@@ -1112,8 +1107,8 @@
                 </div>
                 <!-- Card 2 -->
                 <div class="why-choose-card reveal" style="transition-delay: 0.1s;">
-                    <h3>FDA-Cleared NeuroStar Tech</h3>
-                    <p>We use the latest NeuroStar® TMS systems, the industry leader in non-invasive depression
+                    <h3>FDA-Cleared TMS Technology</h3>
+                    <p>We use the latest medical-grade TMS systems, a leading advancement in non-invasive depression
                         treatment, renowned for precision and safety.</p>
                 </div>
                 <!-- Card 3 -->
@@ -1233,7 +1228,7 @@
     <!-- 2. HOW IT WORKS (Redesigned) -->
     <section class="section bg-light">
         <div class="container">
-            <div class="text-center reveal" style="max-width: 800px; margin: 0 auto 80px;">
+            <div class="text-center reveal" style="max-width: 800px; margin: 0 auto 40px;">
                 <span class="badge-pill">The Mechanism</span>
                 <h2>How TMS Therapy Works</h2>
                 <p>Understanding the science behind magnetic stimulation.</p>
@@ -1293,7 +1288,7 @@
     <!-- 3. HOW TO GET STARTED -->
     <section id="get-started" class="section bg-warm">
         <div class="container">
-            <div class="text-center reveal" style="margin-bottom: 60px;">
+            <div class="text-center reveal" style="margin-bottom: 40px;">
                 <span class="badge-pill">Your Journey</span>
                 <h2>How Do I Get Started?</h2>
                 <p>We make the process simple, transparent, and supportive.</p>
@@ -1386,7 +1381,7 @@
     <!-- 6, 7, 8. COMBINED / INSURANCE / MAINTENANCE -->
     <section class="section">
         <div class="container">
-            <div class="text-center reveal" style="margin-bottom: 60px;">
+            <div class="text-center reveal" style="margin-bottom: 40px;">
                 <span class="badge-pill">Comprehensive Care</span>
                 <h2>Integrated Support & Coverage</h2>
             </div>
@@ -1425,63 +1420,63 @@
     <!-- 7. FAQ Section -->
     <section class="section bg-light">
         <div class="container">
-            <div class="text-center reveal" style="margin-bottom: 50px;">
+            <div class="text-center reveal" style="margin-bottom: 40px;">
                 <span class="badge-pill">Common Questions</span>
                 <h2>Frequently Asked Questions</h2>
             </div>
 
-            <div class="accordion-wrapper reveal">
-                <div class="accordion-item">
-                    <button class="accordion-btn">Is TMS Therapy covered by insurance? <i
-                            class="fa-solid fa-chevron-down"></i></button>
-                    <div class="accordion-content">
-                        <div class="accordion-content-inner">
-                            <p>Yes, TMS is covered by most major insurance providers, including Medicare, usually for
-                                Treatment-Resistant Depression. Our team handles all verification and pre-authorization
-                                steps for you.</p>
-                        </div>
+            <div class="faq-accordion reveal">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is TMS Therapy covered by insurance?</span>
+                        <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, TMS is covered by most major insurance providers, including Medicare, usually for
+                            Treatment-Resistant Depression. Our team handles all verification and pre-authorization
+                            steps for you.</p>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <button class="accordion-btn">Is the treatment painful? <i
-                            class="fa-solid fa-chevron-down"></i></button>
-                    <div class="accordion-content">
-                        <div class="accordion-content-inner">
-                            <p>Most patients report no pain. You may feel a light tapping sensation on your scalp. There
-                                is no anesthesia involved, and any scalp discomfort typically resolves within the first
-                                week.</p>
-                        </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is the treatment painful?</span>
+                        <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most patients report no pain. You may feel a light tapping sensation on your scalp. There
+                            is no anesthesia involved, and any scalp discomfort typically resolves within the first
+                            week.</p>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <button class="accordion-btn">How long does a treatment course last? <i
-                            class="fa-solid fa-chevron-down"></i></button>
-                    <div class="accordion-content">
-                        <div class="accordion-content-inner">
-                            <p>A standard course consists of sessions 5 days a week for about 6-7 weeks. Each session
-                                lasts approximately 19-20 minutes.</p>
-                        </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How long does a treatment course last?</span>
+                        <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A standard course consists of sessions 5 days a week for about 6-7 weeks. Each session
+                            lasts approximately 19-20 minutes.</p>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <button class="accordion-btn">Are there any side effects? <i
-                            class="fa-solid fa-chevron-down"></i></button>
-                    <div class="accordion-content">
-                        <div class="accordion-content-inner">
-                            <p>TMS is free from systemic side effects like weight gain or sexual dysfunction common with
-                                medications. The most common side effect is temporary scalp discomfort or mild headache
-                                during treatment.</p>
-                        </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Are there any side effects?</span>
+                        <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>TMS is free from systemic side effects like weight gain or sexual dysfunction common with
+                            medications. The most common side effect is temporary scalp discomfort or mild headache
+                            during treatment.</p>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <button class="accordion-btn">Can I drive myself home? <i
-                            class="fa-solid fa-chevron-down"></i></button>
-                    <div class="accordion-content">
-                        <div class="accordion-content-inner">
-                            <p>Yes. Since no sedation is used, you are fully alert and can drive yourself to and from
-                                appointments immediately.</p>
-                        </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I drive myself home?</span>
+                        <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. Since no sedation is used, you are fully alert and can drive yourself to and from
+                            appointments immediately.</p>
                     </div>
                 </div>
             </div>
@@ -1489,56 +1484,105 @@
     </section>
 
     <!-- FOOTER CTA (No Global Footer) -->
-    <footer style="background: var(--primary-dark); color: white; padding: 100px 0; text-align: center;">
-        <div class="container reveal">
-            <h2 style="color: white; margin-bottom: 24px;">Ready to Explore TMS?</h2>
-            <p style="color: rgba(255,255,255,0.7); font-size: 1.25rem; margin-bottom: 40px;">Take the first step
-                towards a life free from the burden of depression.</p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="tel:6107416567" class="btn btn-primary"><i class="fa-solid fa-phone"></i> (610) 741-6567</a>
-                <a href="mailto:help@optionspsychiatry.com" class="btn btn-glass"><i class="fa-solid fa-envelope"></i>
-                    Email Us</a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top-centered">
+                <div class="footer-logo">
+                    <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
+                        width="180px">
+                </div>
+                <p class="footer-description-centered">Options provides education, support, and therapeutic options
+                    to those who are suffering from mental health disorders and symptoms. Our focus on TMS Therapy,
+                    Medications & Counseling helps us provide comprehensive and quality care.</p>
+                <div class="footer-cta">
+                    <a href="contact-us.html" class="btn btn-contact-orange">Book An Appointment Today</a>
+                </div>
+                <div class="footer-social-centered">
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
             </div>
-            <p style="margin-top: 60px; font-size: 0.9rem; color: rgba(255,255,255,0.3);">© 2024 Options Psychiatry. All
-                rights reserved.</p>
+
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-title">QUICK LINKS</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"> Home</a></li>
+                        <li><a href="about-us.html"> About Us</a></li>
+                        <li><a href="#"> Blog</a></li>
+                        <li><a href="tms-therapy.html"> TMS Therapy in Reading</a></li>
+                        <li><a href="#"> Medication Management in Reading</a></li>
+                        <li><a href="contact-us.html"> Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">CONDITIONS WE TREAT</h3>
+                    <ul class="footer-links">
+                        <li><a href="depression.html"> Depression</a></li>
+                        <li><a href="anxiety.html"> Anxiety Disorders</a></li>
+                        <li><a href="ptsd.html"> PTSD</a></li>
+                        <li><a href="#"> OCD</a></li>
+                        <li><a href="#"> Bipolar Disorder</a></li>
+                        <li><a href="#"> ADHD</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">CONTACT INFO</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="contact-icon"><i class="fa fa-map-marker"></i></span>
+                            <span>2211 Quarry Drive, Suite E56 Reading PA 19606 United States</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fa fa-phone"></i></span>
+                            <span>(610) 741-6567</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fa fa-phone"></i></span>
+                            <span>(610) 741-6312</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fa fa-envelope"></i></span>
+                            <span>help@optionspsychiatry.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">© Copyright 2025, Options Addiction & Recovery</p>
+                <div class="footer-policies">
+                    <a href="#">HIPAA Policy</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Disclaimer</a>
+                </div>
+            </div>
         </div>
     </footer>
-
-    <!-- INLINE SCRIPTS -->
+    <script src="animations.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Scroll Reveal Animation
-            const observer = new IntersectionObserver((entries) => {
+            // Local Reveal Logic for TMS Page
+            const revealElements = document.querySelectorAll('.reveal');
+
+            const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
                     }
                 });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-            // Accordion Logic
-            const accordions = document.querySelectorAll('.accordion-btn');
-            accordions.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const item = btn.parentElement;
-                    const isActive = item.classList.contains('active');
-                    const content = item.querySelector('.accordion-content');
-
-                    // Close all
-                    document.querySelectorAll('.accordion-item').forEach(el => {
-                        el.classList.remove('active');
-                        el.querySelector('.accordion-content').style.height = '0';
-                    });
-
-                    // Open clicked if not active
-                    if (!isActive) {
-                        item.classList.add('active');
-                        content.style.height = content.scrollHeight + 'px'; // Dynamic height
-                    }
-                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
             });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // Ensure hero is visible immediately
+            const heroReveals = document.querySelectorAll('.hero .reveal');
+            heroReveals.forEach(el => el.classList.add('active'));
         });
     </script>
 </body>

@@ -35,6 +35,11 @@ function addScrollAnimations() {
     `);
 
     animateElements.forEach((el, index) => {
+        // If already has active class, don't hide it
+        if (el.classList.contains('active')) {
+            el.classList.add('aos-animate');
+            return;
+        }
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
         el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
