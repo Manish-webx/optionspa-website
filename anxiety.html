@@ -85,12 +85,6 @@
             font-size: 1.1rem;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
         .section {
             padding: 40px 0;
             position: relative;
@@ -147,8 +141,12 @@
         /* Hero Section */
         .hero {
             padding: 160px 0 100px;
-            background: var(--bg-soft);
-            color: var(--text-main);
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/anxiety-bg.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            position: relative;
         }
 
         .hero-container {
@@ -161,7 +159,7 @@
         .hero-title {
             font-size: 3.5rem;
             margin-bottom: 20px;
-            color: var(--primary-dark) !important;
+            color: white !important;
             opacity: 1 !important;
             visibility: visible !important;
             display: block !important;
@@ -169,7 +167,7 @@
 
         .hero-subtitle {
             font-size: 1.25rem;
-            color: var(--text-muted) !important;
+            color: rgba(255, 255, 255, 0.9) !important;
             margin-bottom: 40px;
             opacity: 1 !important;
         }
@@ -270,7 +268,7 @@
         /* Hero Feature Grid Styling */
         .hero-features-label {
             font-weight: 700;
-            color: var(--primary-dark);
+            color: white;
             margin: 30px 0 15px;
             display: block;
             font-size: 1.1rem;
@@ -407,12 +405,11 @@
         @media (max-width: 968px) {
 
             .grid-3,
-            .signs-row {
-                grid-template-columns: 1fr;
+            .signs-row,
+            .hero-features-grid {
+                grid-template-columns: 1fr !important;
             }
-        }
 
-        @media (max-width: 968px) {
             .hero-container {
                 grid-template-columns: 1fr;
                 gap: 40px;
@@ -420,11 +417,91 @@
             }
 
             .hero-title {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
 
             .symptoms-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .responsive-grid {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+            }
+
+            .mobile-menu-toggle {
+                display: flex !important;
+                flex-direction: column;
+                gap: 5px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 10px;
+                z-index: 1001;
+            }
+
+            .mobile-menu-toggle span {
+                width: 30px;
+                height: 3px;
+                background-color: var(--primary-dark) !important;
+                border-radius: 3px;
+                transition: all 0.3s ease;
+            }
+
+            .mobile-menu-toggle.active span:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .mobile-menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .mobile-menu-toggle.active span:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: white;
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.3s ease;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+
+            .nav-menu.active {
+                max-height: 100vh;
+                padding-bottom: 20px;
+            }
+
+            .nav-list {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+            }
+
+            .nav-item {
+                width: 100%;
+                text-align: center;
+            }
+
+            .dropdown-menu {
+                position: static !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                transform: none !important;
+                box-shadow: none !important;
+                background: var(--bg-soft) !important;
+                display: none;
+                width: 100% !important;
+            }
+
+            .nav-item.dropdown.active .dropdown-menu {
+                display: block;
             }
         }
     </style>
@@ -449,7 +526,7 @@
                         <a href="#" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
                         <ul class="dropdown-menu">
                             <li><a href="tms-therapy.html">TMS Therapy</a></li>
-                            <li><a href="#">Medical Management</a></li>
+                            <li><a href="medical-management.html">Medical Management</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -458,18 +535,12 @@
                             <li><a href="depression.html">Depression</a></li>
                             <li><a href="anxiety.html">Anxiety Disorders</a></li>
                             <li><a href="ptsd.html">PTSD</a></li>
-                            <li><a href="#">OCD</a></li>
-                            <li><a href="#">Bipolar Disorder</a></li>
-                            <li><a href="#">ADHD</a></li>
+                            <li><a href="ocd.html">OCD</a></li>
+                            <li><a href="bipolar-disorder.html">Bipolar Disorder</a></li>
+                            <li><a href="adhd.html">ADHD</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link">Resources <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Blogs</a></li>
-                            <li><a href="#">Insurance</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
@@ -567,7 +638,7 @@
 
         <!-- Section 1: Understanding Anxiety -->
         <section class="section">
-            <div class="container"
+            <div class="container responsive-grid"
                 style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
                 <div class="reveal">
                     <img src="img/anxiety-journey.png" alt="Understanding Anxiety Journey"
@@ -575,13 +646,13 @@
                 </div>
                 <div class="reveal">
                     <span class="badge-pill">Understanding the Condition</span>
-                    <h2>More Than Just Everyday Stress</h2>
-                    <p>Anxiety disorders are medical conditions that go beyond occasional nervousness. They involve
-                        persistent, excessive worry that can interfere with work, relationships, and health.</p>
-                    <p>At Options Psychiatry, we understand that anxiety has both biological and psychological roots.
-                        Our
-                        approach targets the neural pathways responsible for the "fight or flight" response, helping to
-                        restore balance and calm.</p>
+                    <h2>More Than Just Occasional Worry</h2>
+                    <p>Anxiety disorders are complex conditions that involve the brain's "alarm system" becoming overly
+                        sensitive. It's not just about stress; it's about how your nervous system responds to the
+                        world around you.</p>
+                    <p>At Options Psychiatry, we move beyond just managing symptoms. We use a combination of diagnostic
+                        expertise and advanced treatment to help you retrain your brain's response and reclaim your
+                        inner peace.</p>
                 </div>
             </div>
         </section>
@@ -705,38 +776,38 @@
             </div>
         </section>
 
-        <!-- Section 3: Advanced Solutions for Recovery -->
+        <!-- Section 3: Advanced Solutions -->
         <section id="treatment" class="section">
-            <div class="container"
+            <div class="container responsive-grid"
                 style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center;">
                 <div class="reveal">
-                    <span class="badge-pill">Breakthrough Relief</span>
-                    <h2>Innovative Solutions for Lasting Calm</h2>
-                    <p>For many, traditional talk therapy and medications are only part of the solution. We offer
-                        advanced treatments for patients seeking more comprehensive anxiety management.</p>
-                    <p>Our **TMS (Transcranial Magnetic Stimulation)** protocols are designed to modulate the areas of
-                        the brain that have become overactive in anxiety disorders. By calming these neural pathways, we
-                        can help you find lasting relief without the systemic side effects of medication.</p>
+                    <span class="badge-pill">Innovative Treatment</span>
+                    <h2>Comprehensive Care for Anxiety</h2>
+                    <p>Every anxiety journey is unique. We provide a multifaceted approach that addresses the biological
+                        and behavioral aspects of the condition.</p>
+                    <p>We combine Medication Management with structured support and evidence-based treatment approaches.
+                        While TMS is primarily known for depression, emerging protocols are showing promise for
+                        anxiety modulation and neural stabilization in certain presentations.</p>
                     <ul style="list-style: none; margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
                         <li style="display: flex; gap: 15px; align-items: center;">
                             <i class="fa-solid fa-circle-check" style="color: var(--accent-orange);"></i>
-                            <span>Non-drug approach: No risk of dependency or brain fog</span>
+                            <span>Personalized medication plans with ongoing monitoring</span>
                         </li>
                         <li style="display: flex; gap: 15px; align-items: center;">
                             <i class="fa-solid fa-circle-check" style="color: var(--accent-orange);"></i>
-                            <span>Non-invasive: No downtime or recovery period</span>
+                            <span>Coping strategies and behavioral modulation support</span>
                         </li>
                         <li style="display: flex; gap: 15px; align-items: center;">
                             <i class="fa-solid fa-circle-check" style="color: var(--accent-orange);"></i>
-                            <span>Proven effective for treatment-resistant anxiety and OCD</span>
+                            <span>Access to the latest neuro-scientific treatment protocols</span>
                         </li>
                     </ul>
                     <div style="margin-top: 40px;">
-                        <a href="tms-therapy.html" class="btn-hero-dark">Learn More About TMS</a>
+                        <a href="contact-us.html" class="btn-hero-dark">Start Your Treatment Plan</a>
                     </div>
                 </div>
                 <div class="reveal">
-                    <img src="img/anxiety-hero.png" alt="Peaceful Recovery"
+                    <img src="img/anxiety-hero.png" alt="Anxiety Recovery Solutions"
                         style="width: 100%; border-radius: 32px; box-shadow: -20px 20px 50px rgba(0,0,0,0.15);">
                 </div>
             </div>
@@ -797,10 +868,14 @@
                     <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
                         width="180px">
                 </div>
-                <p class="footer-description-centered">Professional psychiatric care focused on long-term wellness and
-                    innovative recovery solutions in Reading, PA.</p>
+                <p class="footer-description-centered">Options provides education, support, and therapeutic options
+                    to those who are suffering from mental health disorders and symptoms. Our focus on TMS Therapy,
+                    Medications & Counseling helps us provide comprehensive and quality care.</p>
                 <div class="footer-cta">
                     <a href="contact-us.html" class="btn btn-contact-orange">Book An Appointment Today</a>
+                </div>
+                <div class="footer-social-centered">
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
 
@@ -810,31 +885,56 @@
                     <ul class="footer-links">
                         <li><a href="index.html"> Home</a></li>
                         <li><a href="about-us.html"> About Us</a></li>
-                        <li><a href="tms-therapy.html"> TMS Therapy</a></li>
+                        <li><a href="#"> Blog</a></li>
+                        <li><a href="tms-therapy.html"> TMS Therapy in Reading</a></li>
+                        <li><a href="medical-management.html"> Medication Management in Reading</a></li>
                         <li><a href="contact-us.html"> Contact Us</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-column">
-                    <h3 class="footer-title">CONDITIONS</h3>
+                    <h3 class="footer-title">CONDITIONS WE TREAT</h3>
                     <ul class="footer-links">
                         <li><a href="depression.html"> Depression</a></li>
-                        <li><a href="anxiety.html"> Anxiety</a></li>
+                        <li><a href="anxiety.html"> Anxiety Disorders</a></li>
                         <li><a href="ptsd.html"> PTSD</a></li>
-                        <li><a href="#"> OCD</a></li>
+                        <li><a href="ocd.html"> OCD</a></li>
+                        <li><a href="bipolar-disorder.html"> Bipolar Disorder</a></li>
+                        <li><a href="adhd.html"> ADHD</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-column">
-                    <h3 class="footer-title">CONTACT</h3>
+                    <h3 class="footer-title">CONTACT INFO</h3>
                     <ul class="footer-contact">
-                        <li><i class="fa fa-map-marker"></i> 2211 Quarry Drive, Suite E56 Reading PA 19606</li>
-                        <li><i class="fa fa-phone"></i> (610) 741-6567</li>
-                        <li><i class="fa fa-envelope"></i> help@optionspsychiatry.com</li>
+                        <li>
+                            <span class="contact-icon"><i class="fa fa-map-marker"></i></span>
+                            <span>2211 Quarry Drive, Suite E56 Reading PA 19606 United States</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fa fa-phone"></i></span>
+                            <span>(610) 741-6567</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fa fa-phone"></i></span>
+                            <span>(610) 741-6312</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fa fa-envelope"></i></span>
+                            <span>help@optionspsychiatry.com</span>
+                        </li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>© Copyright 2025, Options Addiction & Recovery. All Rights Reserved.</p>
+                <p class="footer-copyright">© Copyright 2025, Options Addiction & Recovery</p>
+                <div class="footer-policies">
+                    <a href="#">HIPAA Policy</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Disclaimer</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -856,6 +956,26 @@
 
             // Hero immediate reveal
             document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('active'));
+
+            // Mobile Menu Toggle
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            menuToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+
+            // Handle Dropdowns in Mobile
+            document.querySelectorAll('.nav-item.dropdown > a').forEach(dropdownToggle => {
+                dropdownToggle.addEventListener('click', function (e) {
+                    if (window.innerWidth <= 968) {
+                        e.preventDefault();
+                        const parent = this.parentElement;
+                        parent.classList.toggle('active');
+                    }
+                });
+            });
 
             // FAQ Accordion
             const questions = document.querySelectorAll('.faq-question');
