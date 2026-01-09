@@ -236,13 +236,20 @@ function initMobileMenu() {
     });
 
     if (menuToggle && navMenu) {
-        console.log('✅ Menu elements found! Adding click listener...');
-        menuToggle.addEventListener('click', (e) => {
-            console.log('🔥 HAMBURGER CLICKED!');
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-            console.log('Menu active:', navMenu.classList.contains('active'));
-        });
+        // Check if inline script has already attached listeners
+        // by checking if the elements already have a data attribute
+        if (!menuToggle.hasAttribute('data-menu-initialized')) {
+            console.log('✅ Adding menu event listeners from animations.js');
+            menuToggle.addEventListener('click', (e) => {
+                console.log('🔥 HAMBURGER CLICKED (from animations.js)!');
+                navMenu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+                console.log('Menu active:', navMenu.classList.contains('active'));
+            });
+            menuToggle.setAttribute('data-menu-initialized', 'true');
+        } else {
+            console.log('ℹ️ Menu already initialized by inline script, skipping animations.js listeners');
+        }
     } else {
         console.error('❌ Menu elements NOT found!', {
             toggle: !!menuToggle,
@@ -250,7 +257,7 @@ function initMobileMenu() {
         });
     }
 
-    // Mobile dropdown functionality
+    // Mobile dropdown functionality  
     dropdownToggles.forEach(toggle => {
         toggle.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
@@ -272,7 +279,8 @@ document.addEventListener('DOMContentLoaded', () => {
     animateCounters();
     addSmoothScroll();
     initFAQ();
-    initMobileMenu();
+    // Mobile menu is now handled by inline scripts on each page
+    // initMobileMenu();
     initHeaderScroll();
 
     console.log('ðŸŽ¨ Modern animations and interactions loaded');

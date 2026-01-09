@@ -907,6 +907,9 @@
             const navMenu = document.querySelector('.nav-menu');
 
             if (menuToggle && navMenu) {
+                // Mark as initialized to prevent animations.js from adding duplicate listeners
+                menuToggle.setAttribute('data-menu-initialized', 'true');
+
                 menuToggle.addEventListener('click', () => {
                     menuToggle.classList.toggle('active');
                     navMenu.classList.toggle('active');

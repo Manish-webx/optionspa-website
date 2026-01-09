@@ -960,10 +960,15 @@
             const menuToggle = document.querySelector('.mobile-menu-toggle');
             const navMenu = document.querySelector('.nav-menu');
 
-            menuToggle.addEventListener('click', function () {
-                navMenu.classList.toggle('active');
-                this.classList.toggle('active');
-            });
+            if (menuToggle && navMenu) {
+                // Mark as initialized to prevent animations.js from adding duplicate listeners
+                menuToggle.setAttribute('data-menu-initialized', 'true');
+
+                menuToggle.addEventListener('click', function () {
+                    navMenu.classList.toggle('active');
+                    this.classList.toggle('active');
+                });
+            }
 
             // Handle Dropdowns in Mobile
             document.querySelectorAll('.nav-item.dropdown > a').forEach(dropdownToggle => {
