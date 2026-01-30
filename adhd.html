@@ -966,22 +966,7 @@
                 });
             });
 
-            // FAQ Accordion
-            document.querySelectorAll('.faq-question').forEach(button => {
-                button.addEventListener('click', () => {
-                    const faqItem = button.parentElement;
-                    const wasActive = faqItem.classList.contains('active');
 
-                    // Close other FAQ items if one is opened
-                    document.querySelectorAll('.faq-item').forEach(item => {
-                        item.classList.remove('active');
-                    });
-
-                    if (!wasActive) {
-                        faqItem.classList.add('active');
-                    }
-                });
-            });
         });
     </script>
 </body>

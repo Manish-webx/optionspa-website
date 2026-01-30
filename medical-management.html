@@ -326,7 +326,6 @@
 
         .faq-item {
             background: white;
-            margin-bottom: 15px;
             border-radius: 16px;
             box-shadow: var(--shadow-card);
             overflow: hidden;
@@ -351,12 +350,11 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease;
-            padding: 0 30px;
+
         }
 
         .faq-item.active .faq-answer {
             max-height: 300px;
-            padding-bottom: 24px;
         }
 
         .faq-toggle i {
@@ -745,7 +743,7 @@
     <!-- FAQ Section -->
     <section class="section bg-light">
         <div class="container">
-            <div class="text-center reveal" style="margin-bottom: 50px;">
+            <div class="text-center reveal" style="margin-bottom: 20px;">
                 <span class="badge-pill">Common Questions</span>
                 <h2>Frequently Asked Questions</h2>
             </div>
@@ -880,16 +878,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // FAQ Accordion Logic
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                question.addEventListener('click', () => {
-                    const isActive = item.classList.contains('active');
-                    faqItems.forEach(i => i.classList.remove('active'));
-                    if (!isActive) item.classList.add('active');
-                });
-            });
+
 
             // Reveal Animation Logic
             const revealElements = document.querySelectorAll('.reveal');

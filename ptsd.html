@@ -976,21 +976,7 @@
                 });
             });
 
-            // FAQ Accordion
-            const questions = document.querySelectorAll('.faq-question');
-            questions.forEach(q => {
-                q.addEventListener('click', () => {
-                    const item = q.parentElement;
-                    const wasActive = item.classList.contains('active');
 
-                    // Close others
-                    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-
-                    if (!wasActive) {
-                        item.classList.add('active');
-                    }
-                });
-            });
         });
     </script>
 </body>

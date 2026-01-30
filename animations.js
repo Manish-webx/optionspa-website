@@ -185,24 +185,44 @@ function addSmoothScroll() {
 // 6. FAQ ACCORDION FUNCTIONALITY
 // ============================================
 function initFAQ() {
-    const faqQuestions = document.querySelectorAll('.faq-question');
+    // Use event delegation on the document to handle all FAQ clicks
+    // This avoids issues with DOM readiness or dynamic elements
+    if (document.body.hasAttribute('data-faq-delegated')) return; // Prevent double delegation
 
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-            const item = question.parentElement;
+    document.body.addEventListener('click', function (e) {
+        // Check if the clicked element or its parent is a faq-question
+        const questionBtn = e.target.closest('.faq-question');
+
+        if (questionBtn) {
+            e.preventDefault();
+
+            const item = questionBtn.closest('.faq-item');
+            if (!item) return;
+
             const isActive = item.classList.contains('active');
+            const accordion = item.closest('.faq-accordion');
 
-            // Close all other items
-            document.querySelectorAll('.faq-item').forEach(el => {
-                el.classList.remove('active');
-            });
+            // If inside an accordion container, close siblings
+            if (accordion) {
+                const siblings = accordion.querySelectorAll('.faq-item');
+                siblings.forEach(el => {
+                    if (el !== item) {
+                        el.classList.remove('active');
+                    }
+                });
+            }
 
             // Toggle current item
-            if (!isActive) {
+            if (isActive) {
+                item.classList.remove('active');
+            } else {
                 item.classList.add('active');
             }
-        });
+        }
     });
+
+    document.body.setAttribute('data-faq-delegated', 'true');
+    console.log('✅ FAQ Event Delegation Initialized');
 }
 
 // ============================================
