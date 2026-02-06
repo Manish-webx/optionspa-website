@@ -599,6 +599,26 @@
                                 Drive. The office is fully ADA accessible.</p>
                         </div>
                     </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What is your cancellation policy?</span>
+                            <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We kindly ask for at least 24 hours' notice if you need to cancel or reschedule. This
+                                allows us to offer the appointment time to another patient who may need care.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What should I bring to my first appointment?</span>
+                            <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Please bring your photo ID, insurance card, and a list of current medications. If you
+                                have previous medical records or a referral, bringing those can also be helpful.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -609,8 +629,10 @@
         <div class="container">
             <div class="footer-top-centered">
                 <div class="footer-logo">
-                    <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
-                        width="180px">
+                    <a href="index.html">
+                        <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
+                            width="180px">
+                    </a>
                 </div>
                 <p class="footer-description-centered">Options provides education, support, and therapeutic options
                     to those who are suffering from mental health disorders and symptoms. Our focus on TMS Therapy,
@@ -726,21 +748,7 @@
                 });
             });
 
-            // FAQ Accordion
-            const questions = document.querySelectorAll('.faq-question');
-            questions.forEach(q => {
-                q.addEventListener('click', () => {
-                    const item = q.parentElement;
-                    const wasActive = item.classList.contains('active');
 
-                    // Close others
-                    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-
-                    if (!wasActive) {
-                        item.classList.add('active');
-                    }
-                });
-            });
         });
     </script>
 </body>

@@ -559,7 +559,7 @@
             <div class="container hero-container">
                 <div class="hero-content reveal">
                     <span class="badge-pill">Specialized Trauma Care</span>
-                    <h1 class="hero-title">Reclaim Your Peace. Resolve Your Trauma.</h1>
+                    <h1 class="hero-title">Compassionate PTSD Treatment in Reading, PA</h1>
                     <p class="hero-subtitle">If past experiences are haunting your present, we provide a safe path back
                         to
                         stability with advanced, trauma-informed treatments designed for lasting recovery.</p>
@@ -612,7 +612,7 @@
                     </div>
 
                     <div class="hero-actions">
-                        <a href="#get-started" class="btn-hero-dark">Book Your Consultation</a>
+                        <a href="contact-us.html" class="btn-hero-dark">Book Your Consultation</a>
                     </div>
                 </div>
 
@@ -751,7 +751,11 @@
                     </div>
                     <div class="type-card reveal" style="transition-delay: 0.1s;">
                         <h3>Comorbid PTSD</h3>
-                        <p>Occurs alongside other conditions like depression, anxiety, or substance use disorders.</p>
+                        <p>Occurs alongside other conditions like <a href="depression.html"
+                                style="color: var(--accent-orange); text-decoration: underline;">depression</a>, <a
+                                href="anxiety.html"
+                                style="color: var(--accent-orange); text-decoration: underline;">anxiety</a>, or
+                            substance use disorders.</p>
                     </div>
                     <div class="type-card reveal" style="transition-delay: 0.2s;">
                         <h3>Complex PTSD (C-PTSD)</h3>
@@ -786,8 +790,13 @@
                     <h2>Tailored Trauma Recovery</h2>
                     <p>We believe in a holistic strategy for overcoming PTSD. Our clinic specializes in both
                         standard psychiatric care and evidence-based treatment approaches.</p>
-                    <p>From TMS Therapy protocols specifically emerging for trauma-related symptoms to precise
-                        Medication Management, we ensure you have access to a comprehensive recovery plan.</p>
+                    <p>From <a href="tms-therapy.html"
+                            style="color: var(--accent-orange); text-decoration: underline;">TMS Therapy</a> protocols
+                        specifically emerging for trauma-related symptoms to precise
+                        <a href="medical-management.html"
+                            style="color: var(--accent-orange); text-decoration: underline;">Medication Management</a>,
+                        we ensure you have access to a comprehensive recovery plan.
+                    </p>
                     <ul style="list-style: none; margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
                         <li style="display: flex; gap: 15px; align-items: center;">
                             <i class="fa-solid fa-circle-check" style="color: var(--accent-orange);"></i>
@@ -838,7 +847,9 @@
                             <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer">
-                            <p>TMS is a non-invasive, drug-free treatment. During your evaluation, we ensure you are an
+                            <p><a href="tms-therapy.html"
+                                    style="color: var(--accent-orange); text-decoration: underline;">TMS</a> is a
+                                non-invasive, drug-free treatment. During your evaluation, we ensure you are an
                                 appropriate candidate and explain the process thoroughly to manage any concerns about
                                 physical or emotional triggers.</p>
                         </div>
@@ -854,6 +865,30 @@
                                 be ongoing depending on your needs.</p>
                         </div>
                     </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Does insurance cover PTSD treatment?</span>
+                            <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. Most major insurance plans, including Medicare, cover psychiatric evaluations,
+                                medication management, and therapy for PTSD. TMS coverage varies by carrier and specific
+                                diagnosis, so we provide a comprehensive benefits check to help you understand your
+                                options.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What makes Options Psychiatry different?</span>
+                            <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We go beyond symptom management by addressing the biological roots of trauma. Our
+                                combination of advanced neurostimulation (TMS), precise medication management, and a
+                                compassionate, trauma-informed approach offers a level of care that helps patients who
+                                haven’t found relief elsewhere.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -864,8 +899,10 @@
         <div class="container">
             <div class="footer-top-centered">
                 <div class="footer-logo">
-                    <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
-                        width="180px">
+                    <a href="index.html">
+                        <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
+                            width="180px">
+                    </a>
                 </div>
                 <p class="footer-description-centered">Options provides education, support, and therapeutic options
                     to those who are suffering from mental health disorders and symptoms. Our focus on TMS Therapy,
@@ -976,21 +1013,7 @@
                 });
             });
 
-            // FAQ Accordion
-            const questions = document.querySelectorAll('.faq-question');
-            questions.forEach(q => {
-                q.addEventListener('click', () => {
-                    const item = q.parentElement;
-                    const wasActive = item.classList.contains('active');
-
-                    // Close others
-                    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-
-                    if (!wasActive) {
-                        item.classList.add('active');
-                    }
-                });
-            });
+            // FAQ Accordion Logic handled by animations.js
         });
     </script>
 </body>

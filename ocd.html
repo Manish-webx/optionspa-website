@@ -559,7 +559,7 @@
             <div class="container hero-container">
                 <div class="hero-content reveal">
                     <span class="badge-pill">Specialized OCD Care</span>
-                    <h1 class="hero-title">Break the Cycle. Reclaim Your Peace.</h1>
+                    <h1 class="hero-title">Find Relief with OCD Treatment in Reading, PA</h1>
                     <p class="hero-subtitle">If intrusive thoughts and repetitive compulsions are controlling your day,
                         we ofer advanced, non-invasive treatments to help you find lasting relief.</p>
 
@@ -611,7 +611,7 @@
                     </div>
 
                     <div class="hero-actions">
-                        <a href="#get-started" class="btn-hero-dark">Book Your Consultation</a>
+                        <a href="contact-us.html" class="btn-hero-dark">Book Your Consultation</a>
                     </div>
                 </div>
 
@@ -714,13 +714,17 @@
                     <div class="symptom-card reveal">
                         <div class="symptom-icon"><i class="fa-solid fa-rotate-left"></i></div>
                         <h3>Obsessions</h3>
-                        <p>Persistent, unwanted thoughts, urges, or images that cause significant anxiety or distress.
+                        <p>Persistent, unwanted thoughts, urges, or images that cause significant <a href="anxiety.html"
+                                style="color: var(--accent-orange); text-decoration: underline;">anxiety</a> or
+                            distress.
                         </p>
                     </div>
                     <div class="symptom-card reveal" style="transition-delay: 0.1s;">
                         <div class="symptom-icon"><i class="fa-solid fa-hand-holding-dots"></i></div>
                         <h3>Compulsions</h3>
-                        <p>Repetitive actions or mental acts performed to neutralize the anxiety caused by obsessions.
+                        <p>Repetitive actions or mental acts performed to neutralize the <a href="anxiety.html"
+                                style="color: var(--accent-orange); text-decoration: underline;">anxiety</a> caused by
+                            obsessions.
                         </p>
                     </div>
                     <div class="symptom-card reveal" style="transition-delay: 0.2s;">
@@ -786,8 +790,11 @@
                     <h2>Tailored OCD Treatment</h2>
                     <p>We believe in a holistic strategy for overcoming OCD. Our clinic specializes in both
                         standard psychiatric care and evidence-based TMS therapy.</p>
-                    <p>From TMS Therapy, which is FDA-cleared for OCD, to precise Medication
-                        Management, we provide the advanced tools necessary for lasting stabilization.</p>
+                    <p>From <a href="tms-therapy.html"
+                            style="color: var(--accent-orange); text-decoration: underline;">TMS Therapy</a>, which is
+                        FDA-cleared for OCD, to precise <a href="medical-management.html"
+                            style="color: var(--accent-orange); text-decoration: underline;">Medication
+                            Management</a>, we provide the advanced tools necessary for lasting stabilization.</p>
                     <ul style="list-style: none; margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
                         <li style="display: flex; gap: 15px; align-items: center;">
                             <i class="fa-solid fa-circle-check" style="color: var(--accent-orange);"></i>
@@ -856,6 +863,28 @@
                                 any out-of-pocket costs.</p>
                         </div>
                     </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can medication alone treat OCD?</span>
+                            <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>While medication can be effective for many, it is often most successful when combined
+                                with other therapies. We often recommend a combination of medication management and
+                                advanced treatments like TMS therapy to achieve the best long-term results.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Is OCD curable?</span>
+                            <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>OCD is a chronic condition, meaning there is no "cure" in the traditional sense. However,
+                                with the right combination of treatments—such as TMS, medication, and therapy—symptoms
+                                can be managed effectively, allowing you to lead a fulfilling and productive life.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -866,8 +895,10 @@
         <div class="container">
             <div class="footer-top-centered">
                 <div class="footer-logo">
-                    <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
-                        width="180px">
+                    <a href="index.html">
+                        <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
+                            width="180px">
+                    </a>
                 </div>
                 <p class="footer-description-centered">Options provides education, support, and therapeutic options
                     to those who are suffering from mental health disorders and symptoms. Our focus on TMS Therapy,
@@ -979,20 +1010,7 @@
             });
 
             // FAQ Accordion
-            const questions = document.querySelectorAll('.faq-question');
-            questions.forEach(q => {
-                q.addEventListener('click', () => {
-                    const item = q.parentElement;
-                    const wasActive = item.classList.contains('active');
-
-                    // Close others
-                    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-
-                    if (!wasActive) {
-                        item.classList.add('active');
-                    }
-                });
-            });
+            // FAQ Accordion Logic handled by animations.js
         });
     </script>
 </body>

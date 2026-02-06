@@ -559,7 +559,7 @@
             <div class="container hero-container">
                 <div class="hero-content reveal">
                     <span class="badge-pill">Specialized Bipolar Care</span>
-                    <h1 class="hero-title">Balance Your Mood. Reclaim Your Life.</h1>
+                    <h1 class="hero-title">Expert Bipolar Disorder Treatment in Reading, PA</h1>
                     <p class="hero-subtitle">Bipolar disorder doesn't have to define you. We provide advanced,
                         compassionate care to help you find stability and lasting wellness.</p>
 
@@ -611,7 +611,7 @@
                     </div>
 
                     <div class="hero-actions">
-                        <a href="#get-started" class="btn-hero-dark">Book Your Consultation</a>
+                        <a href="contact-us.html" class="btn-hero-dark">Book Your Consultation</a>
                     </div>
                 </div>
 
@@ -649,7 +649,8 @@
                     <h2>Navigating the Peaks and Valleys</h2>
                     <p>Bipolar disorder is a complex neurological condition characterized by significant shifts in mood,
                         energy, and activity levels. These shifts range from periods of extremely "up" behaviors (mania
-                        or hypomania) to very "down" periods (depression).</p>
+                        or hypomania) to very "down" periods (<a href="depression.html"
+                            style="color: var(--accent-orange); text-decoration: underline;">depression</a>).</p>
                     <p>At Options Psychiatry, we understand that these mood swings are driven by biological factors. Our
                         approach focuses on stabilizing the brain's neural activity, helping you find a sustainable
                         "middle ground" where you can thrive.</p>
@@ -770,7 +771,9 @@
                     <p>Stability is possible. We combine traditional psychiatric expertise with evidence-based treatment
                         approaches
                         to help you find balance.</p>
-                    <p>Our TMS (Transcranial Magnetic Stimulation) protocols can be a powerful tool for the depressive
+                    <p>Our <a href="tms-therapy.html"
+                            style="color: var(--accent-orange); text-decoration: underline;">TMS (Transcranial Magnetic
+                            Stimulation)</a> protocols can be a powerful tool for the depressive
                         phases of bipolar disorder. By precisely targeting the areas of the brain that are underactive
                         during depression, we can help lift your mood without the systemic side effects often associated
                         with medication.</p>
@@ -781,7 +784,9 @@
                         </li>
                         <li style="display: flex; gap: 15px; align-items: center;">
                             <i class="fa-solid fa-circle-check" style="color: var(--accent-orange);"></i>
-                            <span>Comprehensive care: Integrating medication management with advanced therapy</span>
+                            <span>Comprehensive care: Integrating <a href="medical-management.html"
+                                    style="color: var(--accent-orange); text-decoration: underline;">medication
+                                    management</a> with advanced therapy</span>
                         </li>
                         <li style="display: flex; gap: 15px; align-items: center;">
                             <i class="fa-solid fa-circle-check" style="color: var(--accent-orange);"></i>
@@ -814,7 +819,9 @@
                             <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer">
-                            <p>Yes, TMS is often used to treat the depressive phase of bipolar disorder. It works by
+                            <p>Yes, <a href="tms-therapy.html"
+                                    style="color: var(--accent-orange); text-decoration: underline;">TMS</a> is often
+                                used to treat the depressive phase of bipolar disorder. It works by
                                 stimulating neuroplasticity in the brain's mood-regulating centers, helping to lift
                                 depression when medication alone may not be sufficient.</p>
                         </div>
@@ -841,6 +848,29 @@
                                 from your usual mood.</p>
                         </div>
                     </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can bipolar disorder go away without medication?</span>
+                            <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Bipolar disorder is a lifelong condition that typically requires ongoing management.
+                                While lifestyle changes and therapy are crucial, medication is often necessary to
+                                stabilize mood swings and prevent relapse. We work with you to find the lowest effective
+                                dose with the fewest side effects.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How can family members support a loved one with bipolar disorder?</span>
+                            <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Education and patience are key. Encourage treatment consistency, learn to recognize their
+                                specific warning signs of mania or depression, and listen without judgment. Family
+                                therapy can also be very beneficial in navigating these dynamics together.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -851,8 +881,10 @@
         <div class="container">
             <div class="footer-top-centered">
                 <div class="footer-logo">
-                    <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
-                        width="180px">
+                    <a href="index.html">
+                        <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
+                            width="180px">
+                    </a>
                 </div>
                 <p class="footer-description-centered">Options provides education, support, and therapeutic options
                     to those who are suffering from mental health disorders and symptoms. Our focus on TMS Therapy,
@@ -963,11 +995,15 @@
                 });
             });
 
-            // FAQ Accordion
+            // FAQ Accordion - Re-binding to ensure single listener
+            // Using cloning to strip potentially conflicting listeners from external scripts
             const questions = document.querySelectorAll('.faq-question');
             questions.forEach(q => {
-                q.addEventListener('click', () => {
-                    const item = q.parentElement;
+                const newQ = q.cloneNode(true);
+                q.parentNode.replaceChild(newQ, q);
+
+                newQ.addEventListener('click', () => {
+                    const item = newQ.parentElement;
                     const wasActive = item.classList.contains('active');
 
                     // Close others

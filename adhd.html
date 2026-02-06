@@ -559,7 +559,7 @@
             <div class="container hero-container">
                 <div class="hero-content reveal">
                     <span class="badge-pill">Specialized ADHD Care</span>
-                    <h1 class="hero-title">Master Your Focus. Unlock Your Potential.</h1>
+                    <h1 class="hero-title">Master Your Focus With ADHD Treatment in Reading, PA</h1>
                     <p class="hero-subtitle">ADHD is more than just distraction—it's a different way of processing
                         information. We help you bridge the gap between your ambitions and your actions.</p>
 
@@ -611,7 +611,7 @@
                     </div>
 
                     <div class="hero-actions">
-                        <a href="#get-started" class="btn-hero-dark">Book Your Consultation</a>
+                        <a href="contact-us.html" class="btn-hero-dark">Book Your Consultation</a>
                     </div>
                 </div>
 
@@ -772,8 +772,14 @@
                     <h2>Comprehensive Care for ADHD</h2>
                     <p>Every ADHD journey is unique. We provide a multifaceted approach that addresses the biological
                         and behavioral aspects of the condition.</p>
-                    <p>We combine Medication Management with structured support and evidence-based treatment approaches.
-                        While TMS is primarily known for depression, emerging protocols are showing promise for
+                    <p>We combine <a href="medical-management.html"
+                            style="color: var(--accent-orange); text-decoration: underline;">Medication Management</a>
+                        with structured support and evidence-based treatment approaches.
+                        While <a href="tms-therapy.html"
+                            style="color: var(--accent-orange); text-decoration: underline;">TMS</a> is primarily known
+                        for <a href="depression.html"
+                            style="color: var(--accent-orange); text-decoration: underline;">depression</a>, emerging
+                        protocols are showing promise for
                         cognitive enhancement and focus modulation in certain presentations of ADHD.</p>
                     <ul style="list-style: none; margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
                         <li style="display: flex; gap: 15px; align-items: center;">
@@ -844,6 +850,28 @@
                                 and a tailored treatment plan.</p>
                         </div>
                     </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What is the difference between ADD and ADHD?</span>
+                            <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>ADD is an outdated term. Today, current medical standards use the term ADHD for all forms
+                                of the condition, specifying whether it is predominantly inattentive, hyperactive, or a
+                                combined presentation.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you accept insurance for ADHD treatment?</span>
+                            <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we accept most major insurance plans. We recommend contacting our office to verify
+                                your specific coverage for evaluations and ongoing management to ensure you have clear
+                                information about your benefits.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -854,8 +882,10 @@
         <div class="container">
             <div class="footer-top-centered">
                 <div class="footer-logo">
-                    <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
-                        width="180px">
+                    <a href="index.html">
+                        <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
+                            width="180px">
+                    </a>
                 </div>
                 <p class="footer-description-centered">Options provides education, support, and therapeutic options
                     to those who are suffering from mental health disorders and symptoms. Our focus on TMS Therapy,
@@ -966,22 +996,7 @@
                 });
             });
 
-            // FAQ Accordion
-            document.querySelectorAll('.faq-question').forEach(button => {
-                button.addEventListener('click', () => {
-                    const faqItem = button.parentElement;
-                    const wasActive = faqItem.classList.contains('active');
-
-                    // Close other FAQ items if one is opened
-                    document.querySelectorAll('.faq-item').forEach(item => {
-                        item.classList.remove('active');
-                    });
-
-                    if (!wasActive) {
-                        faqItem.classList.add('active');
-                    }
-                });
-            });
+            // FAQ Accordion logic handled by animations.js
         });
     </script>
 </body>

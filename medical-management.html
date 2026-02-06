@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psychiatric Medication Management | Mental Health Care Reading PA</title>
+    <title>Psychiatric Medication Management in Reading PA</title>
     <meta name="description"
         content="Expert psychiatric medication management at Options Psychiatry in Reading, PA. Personalized care plans for depression, anxiety, ADHD, and more by board-certified providers.">
 
@@ -186,6 +186,7 @@
             font-size: 1.25rem;
             margin-bottom: 30px;
             max-width: 600px;
+            margin-left: -3px;
         }
 
         .hero-features-grid {
@@ -366,6 +367,11 @@
 
         .faq-item.active .faq-toggle i {
             transform: rotate(180deg);
+        }
+
+        .faq-answer p {
+            padding: 0;
+            margin: 0;
         }
 
         /* Footer */
@@ -677,23 +683,43 @@
                     <ul style="list-style: none; padding: 0;">
                         <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
                             <i class="fa-solid fa-circle-check" style="color: var(--accent-orange);"></i>
-                            <span>Major Depressive Disorder (MDD)</span>
+                            <a href="depression.html"
+                                style="text-decoration: none; color: inherit; transition: color 0.3s;"
+                                onmouseover="this.style.color='var(--accent-orange)'"
+                                onmouseout="this.style.color='inherit'"><strong>Major Depressive Disorder
+                                    (MDD)</strong></a>
                         </li>
                         <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
                             <i class="fa-solid fa-circle-check" style="color: var(--accent-orange);"></i>
-                            <span>Generalized Anxiety & Panic Disorders</span>
+                            <a href="anxiety.html"
+                                style="text-decoration: none; color: inherit; transition: color 0.3s;"
+                                onmouseover="this.style.color='var(--accent-orange)'"
+                                onmouseout="this.style.color='inherit'"><strong>Generalized Anxiety & Panic
+                                    Disorders</strong></a>
                         </li>
                         <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
                             <i class="fa-solid fa-circle-check" style="color: var(--accent-orange);"></i>
-                            <span>Adult and Pediatric ADHD</span>
+                            <a href="adhd.html" style="text-decoration: none; color: inherit; transition: color 0.3s;"
+                                onmouseover="this.style.color='var(--accent-orange)'"
+                                onmouseout="this.style.color='inherit'"><strong>Adult and Pediatric ADHD</strong></a>
                         </li>
                         <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
                             <i class="fa-solid fa-circle-check" style="color: var(--accent-orange);"></i>
-                            <span>Bipolar I and II Disorders</span>
+                            <a href="bipolar-disorder.html"
+                                style="text-decoration: none; color: inherit; transition: color 0.3s;"
+                                onmouseover="this.style.color='var(--accent-orange)'"
+                                onmouseout="this.style.color='inherit'"><strong>Bipolar I and II Disorders</strong></a>
                         </li>
                         <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
                             <i class="fa-solid fa-circle-check" style="color: var(--accent-orange);"></i>
-                            <span>OCD and PTSD Management</span>
+                            <span><a href="ocd.html"
+                                    style="text-decoration: none; color: inherit; transition: color 0.3s;"
+                                    onmouseover="this.style.color='var(--accent-orange)'"
+                                    onmouseout="this.style.color='inherit'"><strong>OCD</strong></a> and <a
+                                    href="ptsd.html"
+                                    style="text-decoration: none; color: inherit; transition: color 0.3s;"
+                                    onmouseover="this.style.color='var(--accent-orange)'"
+                                    onmouseout="this.style.color='inherit'"><strong>PTSD Management</strong></a></span>
                         </li>
                     </ul>
                 </div>
@@ -753,34 +779,47 @@
             <div class="faq-accordion reveal">
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>How often will I need to visit?</span>
+                        <span>What is the difference between a psychiatrist and a therapist?</span>
                         <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
                     </button>
                     <div class="faq-answer">
-                        <p>Initially, appointments are more frequent (every 2-4 weeks) as we find the right dose. Once
-                            you are stable and feeling better, visits typically occur every 1-3 months for maintenance.
-                        </p>
+                        <p>Psychiatrists (and psychiatric nurse practitioners) are medical professionals who can
+                            prescribe medication and diagnose complex conditions from a biological perspective.
+                            Therapists focus on talk therapy and behavioral strategies. We often recommend combining
+                            both for the best results.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>What if I'm afraid of side effects?</span>
+                        <span>How long does it take for medication to work?</span>
                         <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
                     </button>
                     <div class="faq-answer">
-                        <p>Our providers prioritize your comfort. We focus on "start low and go slow" to minimize any
-                            initial adjustment symptoms. We will discuss all potential effects before starting any new
+                        <p>It varies by medication and individual. Some medications may show effects in a few days,
+                            while others, like antidepressants, often take 2-6 weeks to reach full effectiveness. We
+                            monitor you closely during this adjustment period to ensure safety and progress.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Will I have to take medication forever?</span>
+                        <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Not necessarily. Many patients use medication as a tool to stabilize their symptoms while
+                            working on coping strategies in therapy. For some chronic conditions, long-term maintenance
+                            may be recommended, but we always re-evaluate your needs over time.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I stop taking my medication if I feel better?</span>
+                        <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Please do not stop medication abruptly, as this can cause withdrawal symptoms or a relapse of
+                            symptoms. Always consult your provider to create a safe, gradual plan for tapering off
                             medication.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Can I do appointments via Telehealth?</span>
-                        <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes! We offer both in-person appointments at our Reading office and secure Telehealth
-                            sessions for your convenience.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -789,8 +828,8 @@
                         <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, we accept most major insurance plans. Please contact our office to verify your specific
-                            coverage details.</p>
+                        <p>Yes, we accept most major insurance plans, including Blue Cross, Aetna, UnitedHealthcare, and
+                            Medicare. Please contact our office to verify your specific coverage details.</p>
                     </div>
                 </div>
             </div>
@@ -802,8 +841,10 @@
         <div class="container">
             <div class="footer-top-centered">
                 <div class="footer-logo">
-                    <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
-                        width="180px">
+                    <a href="index.html">
+                        <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
+                            width="180px">
+                    </a>
                 </div>
                 <p class="footer-description-centered">Options provides education, support, and therapeutic options
                     to those who are suffering from mental health disorders and symptoms. Our focus on TMS Therapy,
@@ -880,16 +921,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // FAQ Accordion Logic
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                question.addEventListener('click', () => {
-                    const isActive = item.classList.contains('active');
-                    faqItems.forEach(i => i.classList.remove('active'));
-                    if (!isActive) item.classList.add('active');
-                });
-            });
+            // FAQ Accordion Logic handled by animations.js
 
             // Reveal Animation Logic
             const revealElements = document.querySelectorAll('.reveal');

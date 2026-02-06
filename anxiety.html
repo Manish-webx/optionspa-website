@@ -559,7 +559,7 @@
             <div class="container hero-container">
                 <div class="hero-content reveal">
                     <span class="badge-pill">Specialized Anxiety Care</span>
-                    <h1 class="hero-title">Break Free from Worry. Find Your Calm.</h1>
+                    <h1 class="hero-title">Break Free from Worry. Anxiety Treatment in Reading, PA.</h1>
                     <p class="hero-subtitle">If persistent worry and intrusive thoughts are holding you back, we offer
                         personalized, evidence-based treatments designed to help you reclaim your peace of mind.</p>
 
@@ -611,7 +611,7 @@
                     </div>
 
                     <div class="hero-actions">
-                        <a href="#get-started" class="btn-hero-dark">Book Your Consultation</a>
+                        <a href="contact-us.html" class="btn-hero-dark">Book Your Consultation</a>
                     </div>
                 </div>
 
@@ -763,12 +763,12 @@
                         </p>
                     </div>
                     <div class="type-card reveal" style="transition-delay: 0.4s;">
-                        <h3>OCD</h3>
+                        <h3><a href="ocd.html" style="color: inherit; text-decoration: none;">OCD</a></h3>
                         <p>Intrusive thoughts (obsessions) that lead to repetitive behaviors (compulsions) to manage the
                             resulting anxiety.</p>
                     </div>
                     <div class="type-card reveal" style="transition-delay: 0.5s;">
-                        <h3>PTSD</h3>
+                        <h3><a href="ptsd.html" style="color: inherit; text-decoration: none;">PTSD</a></h3>
                         <p>A condition triggered by experiencing or witnessing a terrifying event, causing flashbacks
                             and severe anxiety.</p>
                     </div>
@@ -785,8 +785,14 @@
                     <h2>Comprehensive Care for Anxiety</h2>
                     <p>Every anxiety journey is unique. We provide a multifaceted approach that addresses the biological
                         and behavioral aspects of the condition.</p>
-                    <p>We combine Medication Management with structured support and evidence-based treatment approaches.
-                        While TMS is primarily known for depression, emerging protocols are showing promise for
+                    <p>We combine <a href="medical-management.html"
+                            style="color: var(--accent-orange); text-decoration: underline;">Medication Management</a>
+                        with structured support and evidence-based treatment approaches.
+                        While <a href="tms-therapy.html"
+                            style="color: var(--accent-orange); text-decoration: underline;">TMS</a> is primarily known
+                        for <a href="depression.html"
+                            style="color: var(--accent-orange); text-decoration: underline;">depression</a>, emerging
+                        protocols are showing promise for
                         anxiety modulation and neural stabilization in certain presentations.</p>
                     <ul style="list-style: none; margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
                         <li style="display: flex; gap: 15px; align-items: center;">
@@ -839,20 +845,47 @@
                             <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer">
-                            <p>Yes. TMS is FDA-cleared for OCD and is frequently used off-label with great success for
+                            <p>Yes. <a href="tms-therapy.html"
+                                    style="color: var(--accent-orange); text-decoration: underline;">TMS</a> is
+                                FDA-cleared for <a href="ocd.html"
+                                    style="color: var(--accent-orange); text-decoration: underline;">OCD</a> and is
+                                frequently used off-label with great success for
                                 generalized anxiety and panic disorders by targeting the areas of the brain responsible
                                 for mood regulation.</p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>What should I expect during my first visit?</span>
+                            <span>Can I treat anxiety without medication?</span>
                             <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer">
-                            <p>Your first visit involves a comprehensive psychiatric evaluation. We discuss your medical
-                                history, current symptoms, and previous treatments to create a personalized recovery
-                                plan tailored specifically to your needs.</p>
+                            <p>Yes. For many, non-pharmaceutical approaches like TMS therapy (Transcranial Magnetic
+                                Stimulation) provide an effective alternative or adjunct to medication. We also
+                                emphasize lifestyle modifications and coping strategies as part of a holistic treatment
+                                plan.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How long does anxiety treatment typically last?</span>
+                            <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Treatment timelines vary by individual needs. Medication management is often ongoing,
+                                while TMS therapy typically consists of a 6-week course. Many patients report feeling
+                                significant relief within the first few weeks of starting their personalized plan.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Does insurance cover anxiety treatment?</span>
+                            <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Most major insurance providers and Medicare cover psychiatric evaluations and medication
+                                management for anxiety. Coverage for TMS therapy depends on your specific plan and
+                                diagnosis. Our team offers benefit verification to help you understand your options.</p>
                         </div>
                     </div>
                 </div>
@@ -865,8 +898,10 @@
         <div class="container">
             <div class="footer-top-centered">
                 <div class="footer-logo">
-                    <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
-                        width="180px">
+                    <a href="index.html">
+                        <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
+                            width="180px">
+                    </a>
                 </div>
                 <p class="footer-description-centered">Options provides education, support, and therapeutic options
                     to those who are suffering from mental health disorders and symptoms. Our focus on TMS Therapy,
@@ -961,10 +996,15 @@
             const menuToggle = document.querySelector('.mobile-menu-toggle');
             const navMenu = document.querySelector('.nav-menu');
 
-            menuToggle.addEventListener('click', function () {
-                navMenu.classList.toggle('active');
-                this.classList.toggle('active');
-            });
+            if (menuToggle && navMenu) {
+                // Mark as initialized to prevent animations.js from adding duplicate listeners
+                menuToggle.setAttribute('data-menu-initialized', 'true');
+
+                menuToggle.addEventListener('click', function () {
+                    navMenu.classList.toggle('active');
+                    this.classList.toggle('active');
+                });
+            }
 
             // Handle Dropdowns in Mobile
             document.querySelectorAll('.nav-item.dropdown > a').forEach(dropdownToggle => {
@@ -977,21 +1017,7 @@
                 });
             });
 
-            // FAQ Accordion
-            const questions = document.querySelectorAll('.faq-question');
-            questions.forEach(q => {
-                q.addEventListener('click', () => {
-                    const item = q.parentElement;
-                    const wasActive = item.classList.contains('active');
-
-                    // Close others
-                    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-
-                    if (!wasActive) {
-                        item.classList.add('active');
-                    }
-                });
-            });
+            // FAQ Accordion Logic handled by animations.js
         });
     </script>
 </body>
