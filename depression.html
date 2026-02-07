@@ -85,25 +85,25 @@
             font-size: 1.1rem;
         }
 
-        .section {
+        .opt-section {
             padding: 40px 0;
             position: relative;
         }
 
-        .bg-light {
+        .opt-bg-light {
             background-color: var(--bg-soft);
         }
 
-        .bg-warm {
+        .opt-bg-warm {
             background: var(--bg-warm-gradient);
         }
 
-        .text-center {
+        .opt-text-center {
             text-align: center;
         }
 
         /* Badge & Buttons */
-        .badge-pill {
+        .opt-badge-pill {
             display: inline-block;
             background: rgba(255, 122, 21, 0.1);
             color: var(--accent-orange);
@@ -116,7 +116,7 @@
             margin-bottom: 24px;
         }
 
-        .btn-hero-dark {
+        .opt-btn-hero-dark {
             background: var(--accent-orange);
             color: white;
             padding: 18px 40px;
@@ -132,16 +132,16 @@
             cursor: pointer;
         }
 
-        .btn-hero-dark:hover {
+        .opt-btn-hero-dark:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 40px rgba(255, 122, 21, 0.4);
             background: #e06000;
         }
 
         /* Hero Section */
-        .hero {
+        .opt-hero {
             padding: 160px 0 100px;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/depression-bg.webp');
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://res.cloudinary.com/djsfeynrv/image/upload/v1770454819/depression-bg_gatq3p.webp');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -149,14 +149,14 @@
             position: relative;
         }
 
-        .hero-container {
+        .opt-hero-container {
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
             gap: 60px;
             align-items: center;
         }
 
-        .hero-title {
+        .opt-hero-title {
             font-size: 3.5rem;
             margin-bottom: 20px;
             color: white !important;
@@ -165,7 +165,7 @@
             display: block !important;
         }
 
-        .hero-subtitle {
+        .opt-hero-subtitle {
             font-size: 1.25rem;
             color: rgba(255, 255, 255, 0.9) !important;
             margin-bottom: 40px;
@@ -173,14 +173,14 @@
         }
 
         /* Symptom Cards */
-        .symptoms-grid {
+        .opt-symptoms-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             margin-top: 40px;
         }
 
-        .symptom-card {
+        .opt-symptom-card {
             background: white;
             padding: 40px;
             border-radius: var(--radius-xl);
@@ -189,55 +189,55 @@
             border: 1px solid transparent;
         }
 
-        .symptom-card:hover {
+        .opt-symptom-card:hover {
             transform: translateY(-10px);
             border-color: var(--accent-orange);
             box-shadow: 0 20px 60px rgba(15, 44, 58, 0.1);
         }
 
-        .symptom-icon {
+        .opt-symptom-icon {
             font-size: 2.5rem;
             color: var(--accent-orange);
             margin-bottom: 20px;
         }
 
         /* Reveal Animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
+        .opt-reveal {
+            opacity: 1;
+            transform: none;
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
-        .reveal.active {
+        .opt-reveal.opt-active {
             opacity: 1 !important;
             transform: translateY(0) !important;
             visibility: visible !important;
         }
 
         /* Immediate visibility for hero elements to ensure no content is hidden on load */
-        .hero-content,
-        .hero-form,
-        .hero-title,
-        .hero-subtitle,
-        .hero-features-grid {
+        .opt-hero-content,
+        .opt-hero-form,
+        .opt-hero-title,
+        .opt-hero-subtitle,
+        .opt-hero-features-grid {
             opacity: 1 !important;
             transform: translateY(0) !important;
             visibility: visible !important;
         }
 
         /* Consultation Form Card */
-        .consultation-card {
+        .opt-consultation-card {
             background: white;
             padding: 40px;
             border-radius: 24px;
             box-shadow: 0 20px 50px rgba(15, 44, 58, 0.1);
         }
 
-        .form-group {
+        .opt-form-group {
             margin-bottom: 20px;
         }
 
-        .form-control {
+        .opt-form-control {
             width: 100%;
             padding: 16px;
             border: 1px solid #E2E8F0;
@@ -247,7 +247,7 @@
             background: #F8FAFC;
         }
 
-        .btn-submit {
+        .opt-btn-submit {
             width: 100%;
             background: var(--accent-orange);
             color: white;
@@ -260,13 +260,13 @@
             transition: all 0.3s ease;
         }
 
-        .btn-submit:hover {
+        .opt-btn-submit:hover {
             background: #e06000;
             transform: translateY(-2px);
         }
 
         /* Hero Feature Grid Styling */
-        .hero-features-label {
+        .opt-hero-features-label {
             font-weight: 700;
             color: white;
             margin: 30px 0 15px;
@@ -274,14 +274,14 @@
             font-size: 1.1rem;
         }
 
-        .hero-features-grid {
+        .opt-hero-features-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
             margin-bottom: 40px;
         }
 
-        .feature-item-card {
+        .opt-feature-item-card {
             background: white;
             padding: 20px;
             border-radius: 16px;
@@ -293,13 +293,13 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
-        .feature-item-card:hover {
+        .opt-feature-item-card:hover {
             border-color: var(--accent-orange);
             box-shadow: 0 8px 30px rgba(255, 122, 21, 0.1);
             transform: translateY(-5px);
         }
 
-        .feature-icon-circle {
+        .opt-feature-icon-circle {
             width: 45px;
             height: 45px;
             background: #F0F4F7;
@@ -312,7 +312,7 @@
             flex-shrink: 0;
         }
 
-        .feature-text h4 {
+        .opt-feature-text h4 {
             font-size: 1rem;
             margin-bottom: 4px;
             color: var(--primary-dark);
@@ -320,7 +320,7 @@
             font-family: 'Barlow', sans-serif;
         }
 
-        .feature-text p {
+        .opt-feature-text p {
             font-size: 0.85rem;
             margin: 0;
             color: var(--text-muted);
@@ -328,13 +328,13 @@
         }
 
         /* Types & Signs Styling */
-        .grid-3 {
+        .opt-grid-3 {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
-        .type-card {
+        .opt-type-card {
             background: white;
             padding: 35px;
             border-radius: var(--radius-xl);
@@ -343,32 +343,32 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
         }
 
-        .type-card:hover {
+        .opt-type-card:hover {
             border-color: var(--accent-orange);
             transform: translateY(-5px);
             box-shadow: 0 15px 40px rgba(15, 44, 58, 0.08);
         }
 
-        .type-card h3 {
+        .opt-type-card h3 {
             font-size: 1.3rem;
             margin-bottom: 15px;
             color: var(--primary-dark);
         }
 
-        .type-card p {
+        .opt-type-card p {
             font-size: 1rem;
             margin-bottom: 0;
             color: var(--text-muted);
         }
 
-        .signs-row {
+        .opt-signs-row {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 40px;
             margin-top: 40px;
         }
 
-        .sign-item {
+        .opt-sign-item {
             display: flex;
             gap: 20px;
             background: white;
@@ -377,7 +377,7 @@
             align-items: center;
         }
 
-        .sign-icon {
+        .opt-sign-icon {
             width: 60px;
             height: 60px;
             background: var(--bg-warm-gradient);
@@ -390,46 +390,46 @@
             flex-shrink: 0;
         }
 
-        .sign-text h4 {
+        .opt-sign-text h4 {
             font-size: 1.1rem;
             margin-bottom: 5px;
             font-family: 'Barlow', sans-serif;
             font-weight: 700;
         }
 
-        .sign-text p {
+        .opt-sign-text p {
             font-size: 0.95rem;
             margin: 0;
         }
 
         @media (max-width: 968px) {
 
-            .grid-3,
-            .signs-row,
-            .hero-features-grid {
+            .opt-grid-3,
+            .opt-signs-row,
+            .opt-hero-features-grid {
                 grid-template-columns: 1fr !important;
             }
 
-            .hero-container {
+            .opt-hero-container {
                 grid-template-columns: 1fr;
                 gap: 40px;
                 text-align: center;
             }
 
-            .hero-title {
+            .opt-hero-title {
                 font-size: 2.5rem;
             }
 
-            .symptoms-grid {
+            .opt-symptoms-grid {
                 grid-template-columns: 1fr;
             }
 
-            .responsive-grid {
+            .opt-responsive-grid {
                 grid-template-columns: 1fr !important;
                 gap: 30px !important;
             }
 
-            .mobile-menu-toggle {
+            .opt-mobile-menu-toggle {
                 display: flex !important;
                 flex-direction: column;
                 gap: 5px;
@@ -440,7 +440,7 @@
                 z-index: 1001;
             }
 
-            .mobile-menu-toggle span {
+            .opt-mobile-menu-toggle span {
                 width: 30px;
                 height: 3px;
                 background-color: var(--primary-dark) !important;
@@ -448,19 +448,19 @@
                 transition: all 0.3s ease;
             }
 
-            .mobile-menu-toggle.active span:nth-child(1) {
+            .opt-mobile-menu-toggle.opt-active span:nth-child(1) {
                 transform: translateY(8px) rotate(45deg);
             }
 
-            .mobile-menu-toggle.active span:nth-child(2) {
+            .opt-mobile-menu-toggle.opt-active span:nth-child(2) {
                 opacity: 0;
             }
 
-            .mobile-menu-toggle.active span:nth-child(3) {
+            .opt-mobile-menu-toggle.opt-active span:nth-child(3) {
                 transform: translateY(-8px) rotate(-45deg);
             }
 
-            .nav-menu {
+            .opt-nav-menu {
                 position: fixed;
                 top: 80px;
                 left: 0;
@@ -473,23 +473,23 @@
                 z-index: 1000;
             }
 
-            .nav-menu.active {
+            .opt-nav-menu.opt-active {
                 max-height: 100vh;
                 padding-bottom: 20px;
             }
 
-            .nav-list {
+            .opt-nav-list {
                 flex-direction: column;
                 align-items: center;
                 padding: 20px 0;
             }
 
-            .nav-item {
+            .opt-nav-item {
                 width: 100%;
                 text-align: center;
             }
 
-            .dropdown-menu {
+            .opt-dropdown-menu {
                 position: static !important;
                 opacity: 1 !important;
                 visibility: visible !important;
@@ -500,7 +500,7 @@
                 width: 100% !important;
             }
 
-            .nav-item.dropdown.active .dropdown-menu {
+            .opt-nav-item.opt-dropdown.opt-active .opt-dropdown-menu {
                 display: block;
             }
         }
@@ -509,29 +509,29 @@
 
 <body>
 
-    <header class="header">
-        <div class="container header-container">
-            <div class="header-logo">
+    <header class="opt-header">
+        <div class="opt-container opt-header-container">
+            <div class="opt-header-logo">
                 <a href="index.html">
                     <img src="https://www.optionspa.com/wp-content/uploads/2022/04/OPTIONS-ADDICTION-RECOVERY.png"
                         alt="Options Psychiatry Logo" style="width: 150px;">
                 </a>
             </div>
 
-            <nav class="nav-menu">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="about-us.html" class="nav-link">About</a></li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu">
+            <nav class="opt-nav-menu">
+                <ul class="opt-nav-list">
+                    <li class="opt-nav-item"><a href="index.html" class="opt-nav-link">Home</a></li>
+                    <li class="opt-nav-item"><a href="about-us.html" class="opt-nav-link">About</a></li>
+                    <li class="opt-nav-item opt-dropdown">
+                        <a href="#" class="opt-nav-link">Services <span class="opt-dropdown-arrow">▼</span></a>
+                        <ul class="opt-dropdown-menu">
                             <li><a href="tms-therapy.html">TMS Therapy</a></li>
                             <li><a href="medical-management.html">Medical Management</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link">Conditions <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu">
+                    <li class="opt-nav-item opt-dropdown">
+                        <a href="#" class="opt-nav-link">Conditions <span class="opt-dropdown-arrow">▼</span></a>
+                        <ul class="opt-dropdown-menu">
                             <li><a href="depression.html">Depression</a></li>
                             <li><a href="anxiety.html">Anxiety Disorders</a></li>
                             <li><a href="ptsd.html">PTSD</a></li>
@@ -540,12 +540,13 @@
                             <li><a href="adhd.html">ADHD</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
+                    <li class="opt-nav-item"><a href="https://www.optionspa.com/blog/" class="opt-nav-link">Blog</a>
+                    </li>
+                    <li class="opt-nav-item"><a href="contact-us.html" class="opt-nav-link">Contact</a></li>
                 </ul>
             </nav>
 
-            <button class="mobile-menu-toggle">
+            <button class="opt-mobile-menu-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -555,81 +556,85 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
-            <div class="container hero-container">
-                <div class="hero-content reveal">
-                    <span class="badge-pill">Specialized Depression Care</span>
-                    <h1 class="hero-title">Rediscover Hope. Overcome Depression.</h1>
-                    <p class="hero-subtitle">If you're feeling stuck in a cycle of persistent sadness and low energy, we
+        <section class="opt-hero">
+            <div class="opt-container opt-hero-container">
+                <div class="opt-hero-content opt-reveal">
+                    <span class="opt-badge-pill">Specialized Depression Care</span>
+                    <h1 class="opt-hero-title">Rediscover Hope. Overcome Depression.</h1>
+                    <p class="opt-hero-subtitle">If you're feeling stuck in a cycle of persistent sadness and low
+                        energy, we
                         offer evidence-based treatments that go beyond traditional options.</p>
 
-                    <span class="hero-features-label">Our Core Benefits</span>
-                    <div class="hero-features-grid">
+                    <span class="opt-hero-features-label">Our Core Benefits</span>
+                    <div class="opt-hero-features-grid">
                         <!-- Card 1 -->
-                        <div class="feature-item-card">
-                            <div class="feature-icon-circle">
+                        <div class="opt-feature-item-card">
+                            <div class="opt-feature-icon-circle">
                                 <i class="fa-solid fa-notes-medical"></i>
                             </div>
-                            <div class="feature-text">
+                            <div class="opt-feature-text">
                                 <h4>Non-Invasive</h4>
                                 <p>No surgery & No anesthesia</p>
                             </div>
                         </div>
 
                         <!-- Card 2 -->
-                        <div class="feature-item-card">
-                            <div class="feature-icon-circle">
+                        <div class="opt-feature-item-card">
+                            <div class="opt-feature-icon-circle">
                                 <i class="fa-solid fa-shield-halved"></i>
                             </div>
-                            <div class="feature-text">
+                            <div class="opt-feature-text">
                                 <h4>FDA Cleared</h4>
                                 <p>Safe & Effective Therapy</p>
                             </div>
                         </div>
 
                         <!-- Card 3 -->
-                        <div class="feature-item-card">
-                            <div class="feature-icon-circle">
+                        <div class="opt-feature-item-card">
+                            <div class="opt-feature-icon-circle">
                                 <i class="fa-solid fa-ban"></i>
                             </div>
-                            <div class="feature-text">
+                            <div class="opt-feature-text">
                                 <h4>No Side Effects</h4>
                                 <p>No weight gain or drowsines</p>
                             </div>
                         </div>
 
                         <!-- Card 4 -->
-                        <div class="feature-item-card">
-                            <div class="feature-icon-circle">
+                        <div class="opt-feature-item-card">
+                            <div class="opt-feature-icon-circle">
                                 <i class="fa-solid fa-file-invoice-dollar"></i>
                             </div>
-                            <div class="feature-text">
+                            <div class="opt-feature-text">
                                 <h4>Insurance Covered</h4>
                                 <p>Medicare & Major Plans</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="hero-actions">
-                        <a href="#get-started" class="btn-hero-dark">Book Your Consultation</a>
+                    <div class="opt-hero-actions">
+                        <a href="#get-started" class="opt-btn-hero-dark">Book Your Consultation</a>
                     </div>
                 </div>
 
-                <div class="hero-form reveal">
-                    <div class="consultation-card">
+                <div class="opt-hero-form opt-reveal">
+                    <div class="opt-consultation-card">
                         <h3>Start Your Journey</h3>
                         <p>Speak with our specialists about your path to recovery.</p>
-                        <form onsubmit="event.preventDefault(); alert('Request Submitted!');">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Full Name *" required>
+                        <form accept-charset='UTF-8' action='https://app.formester.com/forms/qYHPZIOTp/submissions'
+                            method='POST'>
+                            <div class="opt-form-group">
+                                <input type="text" class="opt-form-control" name="name" placeholder="Full Name *"
+                                    required>
                             </div>
-                            <div class="form-group">
-                                <input type="tel" class="form-control" placeholder="Phone Number *" required>
+                            <div class="opt-form-group">
+                                <input type="tel" class="opt-form-control" name="phone" placeholder="Phone Number *"
+                                    required>
                             </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Email Address">
+                            <div class="opt-form-group">
+                                <input type="email" class="opt-form-control" name="email" placeholder="Email Address">
                             </div>
-                            <button type="submit" class="btn-submit">Request A Call Back</button>
+                            <button type="submit" class="opt-btn-submit">Request A Call Back</button>
                         </form>
                     </div>
                 </div>
@@ -637,15 +642,16 @@
         </section>
 
         <!-- Section 1: Understanding Depression -->
-        <section class="section">
-            <div class="container responsive-grid"
+        <section class="opt-section">
+            <div class="opt-container opt-responsive-grid"
                 style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
-                <div class="reveal">
-                    <img src="img/depression-journey.png" alt="Understanding Depression Journey"
+                <div class="opt-reveal">
+                    <img src="https://res.cloudinary.com/djsfeynrv/image/upload/v1770454820/depression-journey_gk42ae.jpg"
+                        alt="Understanding Depression Journey"
                         style="width: 100%; border-radius: 32px; box-shadow: 20px 20px 0px var(--bg-warm-gradient);">
                 </div>
-                <div class="reveal">
-                    <span class="badge-pill">Clinical Definition</span>
+                <div class="opt-reveal">
+                    <span class="opt-badge-pill">Clinical Definition</span>
                     <h2>A Deep Dive into Depression</h2>
                     <p>Major Depressive Disorder is a serious medical condition that affects how you feel, think, and
                         handle daily activities. It's more than just feeling blue — it's a persistent state that can
@@ -658,40 +664,40 @@
         </section>
 
         <!-- SECTION: EARLY SIGNS -->
-        <section class="section bg-warm">
-            <div class="container">
-                <div class="text-center reveal" style="max-width: 800px; margin: 0 auto 40px;">
-                    <span class="badge-pill">Early Detection</span>
+        <section class="opt-section opt-bg-warm">
+            <div class="opt-container">
+                <div class="opt-text-center opt-reveal" style="max-width: 800px; margin: 0 auto 40px;">
+                    <span class="opt-badge-pill">Early Detection</span>
                     <h2>Early Warning Signs of Depression</h2>
                     <p>Recognizing the subtle shifts in behavior or mood before they become overwhelming can lead to
                         faster recovery and more effective treatment.</p>
                 </div>
 
-                <div class="signs-row">
-                    <div class="sign-item reveal">
-                        <div class="sign-icon"><i class="fa-solid fa-moon"></i></div>
-                        <div class="sign-text">
+                <div class="opt-signs-row">
+                    <div class="opt-sign-item opt-reveal">
+                        <div class="opt-sign-icon"><i class="fa-solid fa-moon"></i></div>
+                        <div class="opt-sign-text">
                             <h4>Disrupted Sleep</h4>
                             <p>Harder time falling asleep or sleeping significantly more than usual.</p>
                         </div>
                     </div>
-                    <div class="sign-item reveal">
-                        <div class="sign-icon"><i class="fa-solid fa-bolt"></i></div>
-                        <div class="sign-text">
+                    <div class="opt-sign-item opt-reveal">
+                        <div class="opt-sign-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <div class="opt-sign-text">
                             <h4>Increased Irritability</h4>
                             <p>Feeling "on edge" or snapping at loved ones over minor issues.</p>
                         </div>
                     </div>
-                    <div class="sign-item reveal">
-                        <div class="sign-icon"><i class="fa-solid fa-cloud"></i></div>
-                        <div class="sign-text">
+                    <div class="opt-sign-item opt-reveal">
+                        <div class="opt-sign-icon"><i class="fa-solid fa-cloud"></i></div>
+                        <div class="opt-sign-text">
                             <h4>Persistent Brain Fog</h4>
                             <p>Difficulty making simple decisions or focusing at work or school.</p>
                         </div>
                     </div>
-                    <div class="sign-item reveal">
-                        <div class="sign-icon"><i class="fa-solid fa-users-slash"></i></div>
-                        <div class="sign-text">
+                    <div class="opt-sign-item opt-reveal">
+                        <div class="opt-sign-icon"><i class="fa-solid fa-users-slash"></i></div>
+                        <div class="opt-sign-text">
                             <h4>Social Withdrawal</h4>
                             <p>Canceling plans or losing the urge to connect with friends and family.</p>
                         </div>
@@ -701,30 +707,34 @@
         </section>
 
         <!-- Section 2: Symptoms -->
-        <section class="section bg-light">
-            <div class="container">
-                <div class="text-center reveal" style="max-width: 800px; margin: 0 auto 40px;">
-                    <span class="badge-pill">Know the Signs</span>
+        <section class="opt-section opt-bg-light">
+            <div class="opt-container">
+                <div class="opt-text-center opt-reveal" style="max-width: 800px; margin: 0 auto 40px;">
+                    <span class="opt-badge-pill">Know the Signs</span>
                     <h2>How Depression Manifests</h2>
                 </div>
 
-                <div class="symptoms-grid">
-                    <div class="symptom-card reveal">
-                        <div class="symptom-icon"><img src="img/Emotional.png" class="img-fluid" style="width:50px">
+                <div class="opt-symptoms-grid">
+                    <div class="opt-symptom-card opt-reveal">
+                        <div class="opt-symptom-icon"><img
+                                src="https://res.cloudinary.com/djsfeynrv/image/upload/v1770454820/Emotional_jjyfpk.png"
+                                class="img-fluid" style="width:50px">
                         </div>
                         <h3>Emotional</h3>
                         <p>Persistent sadness, feelings of hopelessness, guilt, worthlessness, or loss of interest in
                             once-loved activities.</p>
                     </div>
-                    <div class="symptom-card reveal" style="transition-delay: 0.1s;">
-                        <div class="symptom-icon"><img src="img/physical.png" class="img-fluid" style="width:50px">
+                    <div class="opt-symptom-card opt-reveal" style="transition-delay: 0.1s;">
+                        <div class="opt-symptom-icon"><img
+                                src="https://res.cloudinary.com/djsfeynrv/image/upload/v1770454845/physical_psynrx.png"
+                                class="img-fluid" style="width:50px">
                         </div>
                         <h3>Physical</h3>
                         <p>Chronic fatigue, changes in appetite or weight, sleep disturbances, and unexplained aches or
                             pains.</p>
                     </div>
-                    <div class="symptom-card reveal" style="transition-delay: 0.2s;">
-                        <div class="symptom-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+                    <div class="opt-symptom-card opt-reveal" style="transition-delay: 0.2s;">
+                        <div class="opt-symptom-icon"><i class="fa-solid fa-cloud-sun"></i></div>
                         <h3>Cognitive</h3>
                         <p>Difficulty concentrating, memory issues, indecisiveness, and persistent negative thought
                             patterns.</p>
@@ -734,41 +744,41 @@
         </section>
 
         <!-- SECTION: TYPES OF DEPRESSION -->
-        <section class="section bg-warm">
-            <div class="container">
-                <div class="text-center reveal" style="max-width: 800px; margin: 0 auto 40px;">
-                    <span class="badge-pill">Clinical Categories</span>
+        <section class="opt-section opt-bg-warm">
+            <div class="opt-container">
+                <div class="opt-text-center opt-reveal" style="max-width: 800px; margin: 0 auto 40px;">
+                    <span class="opt-badge-pill">Clinical Categories</span>
                     <h2>Common Types of Depression</h2>
                     <p>Depression is an umbrella term for several distinct clinical conditions. Identifying the specific
                         type is the first step in building an effective treatment plan.</p>
                 </div>
 
-                <div class="grid-3">
-                    <div class="type-card reveal">
+                <div class="opt-grid-3">
+                    <div class="opt-type-card opt-reveal">
                         <h3>Major Depressive Disorder (MDD)</h3>
                         <p>The most common form, characterized by a persistent low mood that interferes with daily life
                             for at least two weeks.</p>
                     </div>
-                    <div class="type-card reveal" style="transition-delay: 0.1s;">
+                    <div class="opt-type-card opt-reveal" style="transition-delay: 0.1s;">
                         <h3>Persistent Depressive Disorder</h3>
                         <p>Also known as Dysthymia, this involves a chronic low-level depression that lasts for two
                             years or more.</p>
                     </div>
-                    <div class="type-card reveal" style="transition-delay: 0.2s;">
+                    <div class="opt-type-card opt-reveal" style="transition-delay: 0.2s;">
                         <h3>Postpartum Depression</h3>
                         <p>A severe form of depression that occurs after childbirth, affecting mood, energy, and bonding
                             with the baby.</p>
                     </div>
-                    <div class="type-card reveal" style="transition-delay: 0.3s;">
+                    <div class="opt-type-card opt-reveal" style="transition-delay: 0.3s;">
                         <h3>Seasonal Affective Disorder (SAD)</h3>
                         <p>Depression that occurs at the same time each year, usually during the dark winter months.</p>
                     </div>
-                    <div class="type-card reveal" style="transition-delay: 0.4s;">
+                    <div class="opt-type-card opt-reveal" style="transition-delay: 0.4s;">
                         <h3>Bipolar Disorder</h3>
                         <p>Involves periods of intense lows (depression) alternating with periods of intense highs
                             (mania).</p>
                     </div>
-                    <div class="type-card reveal" style="transition-delay: 0.5s;">
+                    <div class="opt-type-card opt-reveal" style="transition-delay: 0.5s;">
                         <h3>Psychotic Depression</h3>
                         <p>Severe depression accompanied by some form of psychosis, such as hallucinations or
                             delusions.</p>
@@ -778,11 +788,11 @@
         </section>
 
         <!-- Section 3: Advanced Solutions -->
-        <section id="treatment" class="section">
-            <div class="container responsive-grid"
+        <section id="treatment" class="opt-section">
+            <div class="opt-container opt-responsive-grid"
                 style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center;">
-                <div class="reveal">
-                    <span class="badge-pill">Innovative Solutions</span>
+                <div class="opt-reveal">
+                    <span class="opt-badge-pill">Innovative Solutions</span>
                     <h2>Tailored Treatment Protocols</h2>
                     <p>We believe in a holistic strategy for overcoming depression. Our clinic specializes in both
                         standard psychiatric care and evidence-based treatment approaches.</p>
@@ -804,53 +814,54 @@
                         </li>
                     </ul>
                     <div style="margin-top: 40px;">
-                        <a href="contact-us.html" class="btn-hero-dark">Start Your Treatment Plan</a>
+                        <a href="contact-us.html" class="opt-btn-hero-dark">Start Your Treatment Plan</a>
                     </div>
                 </div>
-                <div class="reveal">
-                    <img src="img/gallery-6.webp" alt="Depression Recovery Solutions"
+                <div class="opt-reveal">
+                    <img src="https://res.cloudinary.com/djsfeynrv/image/upload/v1770454825/gallery-6_xyqkws.webp"
+                        alt="Depression Recovery Solutions"
                         style="width: 100%; border-radius: 32px; box-shadow: -20px 20px 50px rgba(0,0,0,0.15);">
                 </div>
             </div>
         </section>
 
         <!-- FAQ Section -->
-        <section id="faq" class="section-faq bg-light">
-            <div class="container">
-                <div class="text-center reveal" style="max-width: 800px; margin: 0 auto 40px;">
-                    <span class="badge-pill">Questions & Answers</span>
+        <section id="faq" class="opt-section-faq opt-bg-light">
+            <div class="opt-container">
+                <div class="opt-text-center opt-reveal" style="max-width: 800px; margin: 0 auto 40px;">
+                    <span class="opt-badge-pill">Questions & Answers</span>
                     <h2>Depression Care FAQ</h2>
                 </div>
 
-                <div class="faq-accordion reveal">
-                    <div class="faq-item">
-                        <button class="faq-question">
+                <div class="opt-faq-accordion opt-reveal">
+                    <div class="opt-faq-item">
+                        <button class="opt-faq-question">
                             <span>How long does it take to see results from treatment?</span>
-                            <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                            <span class="opt-faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
-                        <div class="faq-answer">
+                        <div class="opt-faq-answer">
                             <p>Every journey is unique. Many patients begin to feel a noticeable lift in mood within the
                                 first 2-3 weeks of starting our specialized depression protocols. For long-term
                                 remission, a complete 6-8 week course is typically recommended.</p>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
+                    <div class="opt-faq-item">
+                        <button class="opt-faq-question">
                             <span>Is my treatment covered by insurance?</span>
-                            <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                            <span class="opt-faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
-                        <div class="faq-answer">
+                        <div class="opt-faq-answer">
                             <p>Most major insurance plans, including Medicare, cover depression treatments like TMS when
                                 criteria for treatment-resistance are met. Our team handles all the paperwork and
                                 authorization for you.</p>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
+                    <div class="opt-faq-item">
+                        <button class="opt-faq-question">
                             <span>Can I continue my current medications during TMS?</span>
-                            <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                            <span class="opt-faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
                         </button>
-                        <div class="faq-answer">
+                        <div class="opt-faq-answer">
                             <p>In most cases, yes. TMS works safely alongside many antidepressants. Dr. Crawford will
                                 review your current regimen during your evaluation to ensure the safest and most
                                 effective plan.</p>
@@ -862,31 +873,32 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top-centered">
-                <div class="footer-logo">
+    <footer class="opt-footer">
+        <div class="opt-container">
+            <div class="opt-footer-top-centered">
+                <div class="opt-footer-logo">
                     <img src="https://optionspa.com/wp-content/uploads/2022/04/OPTI.png" alt="Options Logo"
                         width="180px">
                 </div>
-                <p class="footer-description-centered">Options provides education, support, and therapeutic options
+                <p class="opt-footer-description-centered">Options provides education, support, and therapeutic options
                     to those who are suffering from mental health disorders and symptoms. Our focus on TMS Therapy,
                     Medications & Counseling helps us provide comprehensive and quality care.</p>
-                <div class="footer-cta">
-                    <a href="contact-us.html" class="btn btn-contact-orange">Book An Appointment Today</a>
+                <div class="opt-footer-cta">
+                    <a href="contact-us.html" class="opt-btn opt-btn-contact-orange">Book An Appointment Today</a>
                 </div>
-                <div class="footer-social-centered">
-                    <a href="https://www.facebook.com/OptionsAddiction" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <div class="opt-footer-social-centered">
+                    <a href="https://www.facebook.com/OptionsAddiction" class="opt-social-icon" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
 
-            <div class="footer-content">
+            <div class="opt-footer-content">
                 <div class="footer-column">
-                    <h3 class="footer-title">QUICK LINKS</h3>
-                    <ul class="footer-links">
+                    <h3 class="opt-footer-title">QUICK LINKS</h3>
+                    <ul class="opt-footer-links">
                         <li><a href="index.html"> Home</a></li>
                         <li><a href="about-us.html"> About Us</a></li>
-                        <li><a href="#"> Blog</a></li>
+                        <li><a href="https://www.optionspa.com/blog/"> Blog</a></li>
                         <li><a href="tms-therapy.html"> TMS Therapy in Reading</a></li>
                         <li><a href="medical-management.html"> Medication Management in Reading</a></li>
                         <li><a href="contact-us.html"> Contact Us</a></li>
@@ -894,8 +906,8 @@
                 </div>
 
                 <div class="footer-column">
-                    <h3 class="footer-title">CONDITIONS WE TREAT</h3>
-                    <ul class="footer-links">
+                    <h3 class="opt-footer-title">CONDITIONS WE TREAT</h3>
+                    <ul class="opt-footer-links">
                         <li><a href="depression.html"> Depression</a></li>
                         <li><a href="anxiety.html"> Anxiety Disorders</a></li>
                         <li><a href="ptsd.html"> PTSD</a></li>
@@ -906,31 +918,31 @@
                 </div>
 
                 <div class="footer-column">
-                    <h3 class="footer-title">CONTACT INFO</h3>
-                    <ul class="footer-contact">
+                    <h3 class="opt-footer-title">CONTACT INFO</h3>
+                    <ul class="opt-footer-contact">
                         <li>
-                            <span class="contact-icon"><i class="fa fa-map-marker"></i></span>
+                            <span class="opt-contact-icon"><i class="fa fa-map-marker"></i></span>
                             <span>2211 Quarry Drive, Suite E56 Reading PA 19606 United States</span>
                         </li>
                         <li>
-                            <span class="contact-icon"><i class="fa fa-phone"></i></span>
+                            <span class="opt-contact-icon"><i class="fa fa-phone"></i></span>
                             <span><a href="tel:6107416567">(610) 741-6567</a></span>
                         </li>
                         <li>
-                            <span class="contact-icon"><i class="fa fa-fax"></i></span>
-                                <span>(610) 741-6312</span>
-                            </li>
+                            <span class="opt-contact-icon"><i class="fa fa-fax"></i></span>
+                            <span>(610) 741-6312</span>
+                        </li>
                         <li>
-                            <span class="contact-icon"><i class="fa fa-envelope"></i></span>
+                            <span class="opt-contact-icon"><i class="fa fa-envelope"></i></span>
                             <span><a href="mailto:help@optionspsychiatry.com">help@optionspsychiatry.com</a></span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <p class="footer-copyright">© Copyright 2025, Options Addiction & Recovery</p>
-                <div class="footer-policies">
+            <div class="opt-footer-bottom">
+                <p class="opt-footer-copyright">© Copyright 2025, Options Addiction & Recovery</p>
+                <div class="opt-footer-policies">
                     <a href="#">HIPAA Policy</a>
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>

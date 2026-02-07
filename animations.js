@@ -19,29 +19,29 @@ function addScrollAnimations() {
 
     // Add animation classes to elements
     const animateElements = document.querySelectorAll(`
-        .section-tms-intro,
-        .section-conditions,
-        .section-process,
-        .section-why-choose,
-        .section-testimonials,
-        .section-faq,
-        .process-card,
-        .why-card,
+        .opt-section-tms-intro,
+        .opt-section-conditions,
+        .opt-section-process,
+        .opt-section-why-choose,
+        .opt-section-testimonials,
+        .opt-section-faq,
+        .opt-process-card,
+        .opt-why-card,
         .stat-card,
-        .doctor-profile-wrapper,
-        .credential-badge,
-        .testimonial-card,
-        .faq-item
+        .opt-doctor-profile-wrapper,
+        .opt-credential-badge,
+        .opt-testimonial-card,
+        .opt-faq-item
     `);
 
     animateElements.forEach((el, index) => {
         // If already has active class, don't hide it
-        if (el.classList.contains('active')) {
+        if (el.classList.contains('opt-active')) {
             el.classList.add('aos-animate');
             return;
         }
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
+        // el.style.opacity = '0';
+        // el.style.transform = 'translateY(30px)';
         el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
         observer.observe(el);
     });
@@ -61,7 +61,7 @@ document.head.appendChild(style);
 // 2. ENHANCED BUTTON RIPPLE EFFECT
 // ============================================
 function addRippleEffect() {
-    const buttons = document.querySelectorAll('.btn, .btn-primary, .btn-submit, .condition-tab');
+    const buttons = document.querySelectorAll('.opt-btn, .opt-btn-primary, .opt-btn-submit, .opt-condition-tab');
 
     buttons.forEach(button => {
         button.addEventListener('click', function (e) {
@@ -86,7 +86,7 @@ function addRippleEffect() {
 // Ripple CSS
 const rippleStyle = document.createElement('style');
 rippleStyle.textContent = `
-    .btn, .btn-primary, .btn-submit, .condition-tab {
+    .opt-btn, .opt-btn-primary, .opt-btn-submit, .opt-condition-tab {
         position: relative;
         overflow: hidden;
     }
@@ -111,7 +111,7 @@ document.head.appendChild(rippleStyle);
 // 3. PARALLAX EFFECT FOR HERO SECTION
 // ============================================
 function addParallaxEffect() {
-    const hero = document.querySelector('.hero-section');
+    const hero = document.querySelector('.opt-hero-section');
     if (!hero) return;
 
     window.addEventListener('scroll', () => {
@@ -124,7 +124,7 @@ function addParallaxEffect() {
 // 4. COUNTER ANIMATION FOR STATS
 // ============================================
 function animateCounters() {
-    const counters = document.querySelectorAll('.stat-number');
+    const counters = document.querySelectorAll('.opt-stat-number');
     const speed = 200;
 
     const observer = new IntersectionObserver((entries) => {
@@ -191,32 +191,32 @@ function initFAQ() {
 
     document.body.addEventListener('click', function (e) {
         // Check if the clicked element or its parent is a faq-question
-        const questionBtn = e.target.closest('.faq-question');
+        const questionBtn = e.target.closest('.opt-faq-question');
 
         if (questionBtn) {
             e.preventDefault();
 
-            const item = questionBtn.closest('.faq-item');
+            const item = questionBtn.closest('.opt-faq-item');
             if (!item) return;
 
-            const isActive = item.classList.contains('active');
-            const accordion = item.closest('.faq-accordion');
+            const isActive = item.classList.contains('opt-active');
+            const accordion = item.closest('.opt-faq-accordion');
 
             // If inside an accordion container, close siblings
             if (accordion) {
-                const siblings = accordion.querySelectorAll('.faq-item');
+                const siblings = accordion.querySelectorAll('.opt-faq-item');
                 siblings.forEach(el => {
                     if (el !== item) {
-                        el.classList.remove('active');
+                        el.classList.remove('opt-active');
                     }
                 });
             }
 
             // Toggle current item
             if (isActive) {
-                item.classList.remove('active');
+                item.classList.remove('opt-active');
             } else {
-                item.classList.add('active');
+                item.classList.add('opt-active');
             }
         }
     });
@@ -229,14 +229,14 @@ function initFAQ() {
 // 7. HEADER SCROLL EFFECT
 // ============================================
 function initHeaderScroll() {
-    const header = document.querySelector('.header');
+    const header = document.querySelector('.opt-header');
     if (!header) return;
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 20) {
-            header.classList.add('scrolled');
+            header.classList.add('opt-scrolled');
         } else {
-            header.classList.remove('scrolled');
+            header.classList.remove('opt-scrolled');
         }
     });
 }
@@ -245,9 +245,9 @@ function initHeaderScroll() {
 // 8. MOBILE MENU TOGGLE
 // ============================================
 function initMobileMenu() {
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const dropdownToggles = document.querySelectorAll('.dropdown > .nav-link');
+    const menuToggle = document.querySelector('.opt-mobile-menu-toggle');
+    const navMenu = document.querySelector('.opt-nav-menu');
+    const dropdownToggles = document.querySelectorAll('.opt-dropdown > .opt-nav-link');
 
     console.log('🍔 Mobile Menu Init:', {
         menuToggle: menuToggle,
@@ -262,9 +262,9 @@ function initMobileMenu() {
             console.log('✅ Adding menu event listeners from animations.js');
             menuToggle.addEventListener('click', (e) => {
                 console.log('🔥 HAMBURGER CLICKED (from animations.js)!');
-                navMenu.classList.toggle('active');
-                menuToggle.classList.toggle('active');
-                console.log('Menu active:', navMenu.classList.contains('active'));
+                navMenu.classList.toggle('opt-active');
+                menuToggle.classList.toggle('opt-active');
+                console.log('Menu active:', navMenu.classList.contains('opt-active'));
             });
             menuToggle.setAttribute('data-menu-initialized', 'true');
         } else {
@@ -283,7 +283,7 @@ function initMobileMenu() {
             if (window.innerWidth <= 768) {
                 e.preventDefault();
                 const dropdown = toggle.parentElement;
-                dropdown.classList.toggle('active');
+                dropdown.classList.toggle('opt-active');
             }
         });
     });
@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
     addSmoothScroll();
     initFAQ();
     // Mobile menu is now handled by inline scripts on each page
-    // initMobileMenu();
+    initMobileMenu();
     initHeaderScroll();
 
     console.log('ðŸŽ¨ Modern animations and interactions loaded');
