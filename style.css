@@ -1,4 +1,4 @@
-﻿/* Premium Design System - Options Psychiatry */
+/* Premium Design System - Options Psychiatry */
 
 :root {
     /* Palette - Deep, Rich, Trusted */
@@ -3482,4 +3482,17 @@ img {
         justify-content: center;
         gap: 20px;
     }
+}
+
+/* Visually hidden utility for accessible semantic headings */
+.opt-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
